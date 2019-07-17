@@ -1,0 +1,19 @@
+name: BetterShulkerBoxes
+author: Rektb
+version: 1.9
+description: Open your shulkerboxes easier!
+main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
+api-version: 1.14
+permissions:
+  bettershulkerboxes.*:
+    description: Grants all BSB permissions
+    children:
+      bettershulkerboxes.use: true
+      bettershulkerboxes.bypasscooldown: true
+      bettershulkerboxes.updatenotify: true
+  bettershulkerboxes.use:
+    description: Allows you to open shulkerboxes
+  bettershulkerboxes.bypasscooldown:
+    description: Allows you to bypass cooldown if enabled
+  bettershulkerboxes.updatenotify:
+    description: Allows you to be notified of a new BSB version when you join

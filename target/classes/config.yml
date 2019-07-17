@@ -1,0 +1,17 @@
+prefix: '&8[&3BSB&8] '
+inventory_name: '&7Shulkerbox'
+open_msg: '&eOpening shulkerbox...'
+close_msg: '&eClosing shulkerbox...'
+no_permission_msg: '&cPermission denied'
+cooldown_msg: '&cYou have to wait unti you can use this again'
+
+cooldown: 5
+open_sound: 'BLOCK_SHULKER_BOX_OPEN'
+close_sound: 'BLOCK_SHULKER_BOX_CLOSE'
+cooldown_enabled: true
+requires_permission: true
+
+open_msg_enabled: true
+close_msg_enabled: true
+no_permission_msg_enabled: true
+cooldown_msg_enabled: true

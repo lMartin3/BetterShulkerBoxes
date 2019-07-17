@@ -6,45 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="Uploaded source code">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BetterShulkerBoxes_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bsbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_13_2_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BSB.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/UpdateChecker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/DupePreventEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InvCloseEvent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-    </list>
+    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+            <state relative-caret-position="187">
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
               <folding>
                 <element signature="e#960#961#0" expanded="true" />
                 <element signature="e#998#999#0" expanded="true" />
@@ -146,6 +108,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -242,11 +205,12 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="bsb" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556671913479" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563333771714" />
     <property name="last_opened_file_path" value="E:/mine/testing-1.14.2/plugins" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -312,13 +276,20 @@
       <option name="presentableId" value="Default" />
       <updated>1555546349302</updated>
     </task>
+    <task id="LOCAL-00001" summary="Uploaded source code">
+      <created>1563332705759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563332705759</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.297593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.297593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -332,10 +303,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.33260393" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32932165" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.33260393" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -403,19 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding>
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -446,10 +404,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        <state relative-caret-position="187">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
           </folding>
         </state>
       </provider>

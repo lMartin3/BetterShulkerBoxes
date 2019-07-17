@@ -34,10 +34,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="425">
+              <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
               <folding>
-                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
                 <element signature="e#998#999#0" expanded="true" />
                 <element signature="e#1036#1037#0" expanded="true" />
                 <element signature="e#1111#1112#0" expanded="true" />
@@ -128,13 +129,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" />
       </list>
     </option>
   </component>
@@ -177,12 +178,12 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="bsb" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563334575749" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563334709160" />
     <property name="last_opened_file_path" value="E:/mine/testing-1.14.2/plugins" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -262,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563333841177</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1563334606467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563334606467</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -283,8 +291,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50104386" side_tool="true" visible="true" weight="0.31851852" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49895614" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015625" side_tool="true" visible="true" weight="0.32804233" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.4984375" visible="true" weight="0.32804233" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.33260393" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -330,7 +338,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Uploaded source code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploaded source code" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -403,10 +412,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="425">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
           <folding>
-            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
             <element signature="e#998#999#0" expanded="true" />
             <element signature="e#1036#1037#0" expanded="true" />
             <element signature="e#1111#1112#0" expanded="true" />

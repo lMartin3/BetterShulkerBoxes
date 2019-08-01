@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
@@ -91,6 +92,14 @@ public class InteractEvent
             shulkerOpen(p, shulker, getitemname);
         }
     }
+
+    //Right click in inventory to open
+    public void rightClickInventory(InventoryClickEvent e) {
+        Player p = (Player) e.getWhoClicked();
+        e.getClickedInventory();
+    }
+
+
 
     public void shulkerOpen(final Player p, ShulkerBox shulker, String getitemname) {
         if ((!p.getOpenInventory().getType().equals(InventoryType.CREATIVE)) && (!p.getOpenInventory().getType().equals(InventoryType.CRAFTING))) {

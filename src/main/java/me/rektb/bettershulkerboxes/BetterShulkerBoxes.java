@@ -16,8 +16,10 @@ public class BetterShulkerBoxes
     public String lastver = "";
     public String resourceurl = "";
     private UpdateChecker updater = new UpdateChecker(this, 58837);
+    public ConfigurationImport cfgi;
 
     public void onEnable() {
+        cfgi = new ConfigurationImport(this);
         loadConfig();
         getServer().getPluginManager().registerEvents(new InteractEvent(), this);
         getServer().getPluginManager().registerEvents(new InvCloseEvent(), this);

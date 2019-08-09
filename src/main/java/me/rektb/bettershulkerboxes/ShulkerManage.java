@@ -70,7 +70,7 @@ public class ShulkerManage {
 
         Inventory inv;
         if (invname.equals("") || invname.equals(" ")) {
-            inv = Bukkit.createInventory(null, 27);
+            inv = Bukkit.createInventory(null, 27, "Shulkerbox");
         } else {
             inv = Bukkit.createInventory(null, 27, invname);
         }

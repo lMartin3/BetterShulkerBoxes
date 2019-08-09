@@ -25,7 +25,15 @@ public class InvCloseEvent implements Listener {
             if (iteminmainhand.getItemMeta() != null && iteminmainhand.getItemMeta().hasDisplayName()) {
                 holdingitemname = iteminmainhand.getItemMeta().getDisplayName();
             }
-            if (nowinvname.equalsIgnoreCase(cfgi.invname.replace("%itemname%", holdingitemname))) {
+
+            String checkname = cfgi.invname;
+            if (holdingitemname.isEmpty()) {
+                checkname = "Shulkerbox";
+            } else {
+                checkname = checkname.replace("%itemname%", holdingitemname);
+            }
+
+            if (nowinvname.equalsIgnoreCase(checkname)) {
                 shlkm.closeShulker(p, e.getPlayer().getInventory().getItemInMainHand(), e.getInventory());
             }
         }

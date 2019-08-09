@@ -14,11 +14,7 @@ import java.util.ArrayList;
 public class ShulkerManage {
     //This class holds the methods to close and open shulker boxes and some helper functions.
     //STILL NOT IN USE
-    private BetterShulkerBoxes plugin;
-
-    public ShulkerManage(BetterShulkerBoxes pl) {
-        this.plugin = pl;
-    }
+    private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
 
     private ConfigurationImport cfgim = plugin.cfgi;
     public ArrayList<String> cooldownlist = new ArrayList();
@@ -41,7 +37,10 @@ public class ShulkerManage {
         itemStack.setItemMeta(bsm);
         p.getInventory().setItem(p.getInventory().getHeldItemSlot(), itemStack);
         if (cfgim.cfg_closemsg_enabled) {
-            p.sendMessage(cfgim.prefix + cfgim.closemsg);
+            p.sendMessage(cfgim.prefix + cfgim.closemsg.replace("%itemname%", getitemname));
+        }
+        if (!cfgim.cfg_closesound_enabled) {
+            return;
         }
         try {
             p.playSound(p.getLocation(), Sound.valueOf(cfgim.cfg_closesound), 1.0F, 1.0F);
@@ -58,27 +57,36 @@ public class ShulkerManage {
         BlockStateMeta im = (BlockStateMeta) shulkerStack.getItemMeta();
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         String invname = "";
+
         if (shulkerStack.hasItemMeta() && shulkerStack.getItemMeta().hasDisplayName()) {
             invname = shulkerStack.getItemMeta().getDisplayName();
         }
+
         if (cfgim.cfg_openmsg_enabled) {
-            p.sendMessage(cfgim.prefix + cfgim.openmsg);
+            p.sendMessage(cfgim.prefix + cfgim.openmsg.replace("%itemname%", im.getDisplayName()));
         }
-        if (cfgim.invname.contains("%itemname%")) {
-            if (shulkerStack.getItemMeta() != null) {
-                if (shulkerStack.getItemMeta().hasDisplayName()) {
-                    cfgim.invname = invname.replace("%itemname%", invname);
-                }
-            }
+
+        invname = cfgim.invname.replace("%itemname%", im.getDisplayName());
+
+        Inventory inv;
+        if (invname.equals("") || invname.equals(" ")) {
+            inv = Bukkit.createInventory(null, 27);
+        } else {
+            inv = Bukkit.createInventory(null, 27, invname);
         }
-        Inventory inv = Bukkit.createInventory(null, 27, invname);
+
         inv.setContents(shulker.getInventory().getContents());
         p.openInventory(inv);
+
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable() {
             public void run() {
                 cooldownlist.remove(p.getName());
             }
         }, finalcooldown);
+
+        if (!cfgim.cfg_opensound_enabled) {
+            return;
+        }
         try {
             p.playSound(p.getLocation(), Sound.valueOf(cfgim.cfg_opensound), 1.0F, 1.0F);
         } catch (Exception e) {
@@ -87,4 +95,32 @@ public class ShulkerManage {
             p.sendMessage(cfgim.prefix + ChatColor.RED + " <ERROR> Invalid sound: " + ChatColor.YELLOW + cfgim.cfg_opensound + ChatColor.RED + ", please inform an administrator about this.");
         }
     }
+
+    // Just to check if the player is holding a shulkerbox
+    public static boolean isHoldingShulker(Player player, ItemStack eventItem) {
+        ItemStack holding = player.getInventory().getItemInMainHand();
+        if (player.getInventory().getItemInOffHand().equals(eventItem)) {
+            return false;
+        }
+        ItemStack eitem = eventItem;
+        if (!(holding.getItemMeta() instanceof BlockStateMeta)) {
+            return false;
+        }
+        BlockStateMeta im = (BlockStateMeta) eitem.getItemMeta();
+        if (!(im.getBlockState() instanceof ShulkerBox)) {
+            return false;
+        }
+        return holding.toString().contains("SHULKER_BOX");
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -9,18 +9,26 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class BetterShulkerBoxes
-        extends JavaPlugin
-        implements Listener {
+public class BetterShulkerBoxes extends JavaPlugin implements Listener {
+
+    //instance given to ConfigurationImport
+    public BetterShulkerBoxes cfginst;
+
     public boolean updatefound = false;
     public String lastver = "";
     public String resourceurl = "";
     private UpdateChecker updater = new UpdateChecker(this, 58837);
     public ConfigurationImport cfgi;
+    public ShulkerManage shlkm;
 
     public void onEnable() {
-        cfgi = new ConfigurationImport(this);
         loadConfig();
+        cfginst = this;
+        cfgi = new ConfigurationImport();
+        if (!cfgi.checkConfigurationValidity().isEmpty()) {
+            throwConfigurationErrror(cfgi.checkConfigurationValidity());
+        }
+        shlkm = new ShulkerManage();
         getServer().getPluginManager().registerEvents(new InteractEvent(), this);
         getServer().getPluginManager().registerEvents(new InvCloseEvent(), this);
         getServer().getPluginManager().registerEvents(new DupePreventEvents(), this);
@@ -53,4 +61,15 @@ public class BetterShulkerBoxes
         getConfig().options().copyDefaults(true);
         saveConfig();
     }
+
+
+    public void throwConfigurationErrror(String error) {
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "<ERROR> BetterShulkerBoxes found an invalid configuration file. Please fix the following issue(s):");
+        for (String s : error.split("-")) {
+            getServer().getConsoleSender().sendMessage("-> " + s);
+        }
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "Disabling plugin");
+        Bukkit.getPluginManager().disablePlugin(this);
+    }
+
 }

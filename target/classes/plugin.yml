@@ -1,6 +1,6 @@
 name: BetterShulkerBoxes
 author: Rektb
-version: 1.9
+version: 2
 description: Open your shulkerboxes easier!
 main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
 api-version: 1.14

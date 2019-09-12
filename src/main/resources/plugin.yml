@@ -8,12 +8,19 @@ permissions:
   bettershulkerboxes.*:
     description: Grants all BSB permissions
     children:
-      bettershulkerboxes.use: true
+      bettershulkerboxes.use.*: true
       bettershulkerboxes.bypasscooldown: true
       bettershulkerboxes.updatenotify: true
+  bettershulkerboxes.use.*:
+    description: Allows you to open your shulkerbox by rightclicking it when holding it or inside an inventory
+    children:
+      bettershulkerboxes.use: true
+      bettershulkerboxes.use.rightclick: true
   bettershulkerboxes.use:
-    description: Allows you to open shulkerboxes
+    description: Allows you to open shulkerboxes by rightclicking them while holding them in the hand
+  bettershulkerboxes.use.rightclick:
+    description: Allows you to open shulkerboxes by rightclicking it inside an inventory
   bettershulkerboxes.bypasscooldown:
     description: Allows you to bypass cooldown if enabled
   bettershulkerboxes.updatenotify:
-    description: Allows you to be notified of a new BSB version when you join
+    description: Allows you to be notified of a new BSB version when you join, admin-only recommended.

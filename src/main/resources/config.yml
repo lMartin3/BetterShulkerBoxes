@@ -12,3 +12,5 @@ open_sound: 'BLOCK_SHULKER_BOX_OPEN'
 close_sound: 'BLOCK_SHULKER_BOX_CLOSE'
 cooldown_enabled: true
 requires_permission: true
+enable_rightclick_open: true
+rightclick_requires_permission: false

@@ -91,17 +91,29 @@ public class InteractEvent implements Listener {
         if (!shlkm.isHoldingShulker(p, e.getCurrentItem())) {
             return;
         }
+
         //from here, player is 100% trying to open the shulker box;
         e.setCancelled(true);
+
         //TODO helper function for this
-        if (cfgi.cfg_requiresperms) {
-            if (!p.hasPermission("bettershulkerboxes.use")) {
-                if (cfgi.cfg_nopermsmsg_enabled) {
-                    p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
-                }
-                return;
-            }
+        if (!cfgi.cfg_rightclick_enabled) {
+            return;
         }
+
+        if (cfgi.cfg_rightclick_requiresperms && !p.hasPermission("bettershulkerboxes.use.rightclick")) {
+            if (cfgi.cfg_nopermsmsg_enabled) {
+                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
+            }
+            return;
+        }
+
+        if (cfgi.cfg_requiresperms && !p.hasPermission("bettershulkerboxes.use")) {
+            if (cfgi.cfg_nopermsmsg_enabled) {
+                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
+            }
+            return;
+        }
+
         if ((cfgi.cfg_enablecooldown) &&
                 (this.cooldownlist.contains(p)) &&
                 (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
@@ -110,6 +122,7 @@ public class InteractEvent implements Listener {
             }
             return;
         }
+
         shlkm.shulkerSwap(p, e.getSlot());
 
         shlkm.openShulker(p, p.getInventory().getItemInMainHand());

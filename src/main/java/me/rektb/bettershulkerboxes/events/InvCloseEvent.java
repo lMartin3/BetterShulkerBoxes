@@ -28,7 +28,7 @@ public class InvCloseEvent implements Listener {
 
             String checkname = cfgi.invname;
             if (holdingitemname.isEmpty()) {
-                checkname = "Shulkerbox";
+                checkname = cfgi.invname.replace("%itemname%", holdingitemname);
             } else {
                 checkname = checkname.replace("%itemname%", holdingitemname);
             }

@@ -1,4 +1,4 @@
-version: 2.0.2 #Don't change this
+version: 2.2.0 #Don't change this
 
 prefix: '&8[&3BSB&8] '
 inventory_name: '&7Shulkerbox'
@@ -12,3 +12,5 @@ open_sound: 'BLOCK_SHULKER_BOX_OPEN'
 close_sound: 'BLOCK_SHULKER_BOX_CLOSE'
 cooldown_enabled: true
 requires_permission: true
+enable_rightclick_open: true
+rightclick_requires_permission: false

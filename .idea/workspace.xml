@@ -11,7 +11,7 @@
     <bookmark url="file://$PROJECT_DIR$/.idea/workspace.xml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
+    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="Fixed plugin version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
@@ -28,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="51">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-end-line="26" />
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -85,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="255">
               <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -169,8 +169,8 @@
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       </list>
     </option>
   </component>
@@ -183,10 +183,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -327,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567465595102</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Aaaaaaaaa">
+      <created>1568326204432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568326204432</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -412,7 +418,8 @@
     <MESSAGE value="* Fixed a bug where non-renamed shulker boxes would not close properly&#10;* Reformatted DupePreventEvents class" />
     <MESSAGE value="More significant changes:&#10;* Completely finished right-click in inventory to open feature&#10;* Added 'version' parameter to config.yml&#10;* Fixed all duplication bugs&#10;* Fixed illegal nesting&#10;* Modified ShulkerManage helper functions to work properly with the new added feature&#10;* Modified inventory close event so it works with the current feature too&#10;* Fixed a bug where rightclicking shulkerboxes wouldn't open them unless the player was holding an item&#10;* Now %itemname% expression should work properly on open and close messages and inventory name, and it does no longer cause problems&#10;Note: I've chosen to swap the shulkerbox and item in main hand to open it as it's easier to do and it won't have any problems with the actual dupe prevention methods." />
     <MESSAGE value="Just in case commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just in case commit" />
+    <MESSAGE value="Aaaaaaaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -443,7 +450,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="51">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -474,7 +481,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="255">
           <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -496,17 +503,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>

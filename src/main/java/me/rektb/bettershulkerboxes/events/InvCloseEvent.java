@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 
 public class InvCloseEvent implements Listener {
@@ -29,6 +30,9 @@ public class InvCloseEvent implements Listener {
             String checkname = cfgi.invname;
             if (holdingitemname.isEmpty()) {
                 checkname = cfgi.invname.replace("%itemname%", holdingitemname);
+                if (checkname.isEmpty()) {
+                    checkname = InventoryType.SHULKER_BOX.getDefaultTitle();
+                }
             } else {
                 checkname = checkname.replace("%itemname%", holdingitemname);
             }

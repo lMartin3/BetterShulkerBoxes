@@ -17,12 +17,11 @@ public class MainCommand implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase(command)) {
             if ((args.length > 0 && !args[0].equalsIgnoreCase("reload")) || args.length == 0) {
                 sender.sendMessage(cfgi.prefix + ChatColor.AQUA + "This server is running " + ChatColor.YELLOW + "Better Shulker Boxes v" + plugin.getDescription().getVersion() + ChatColor.AQUA + ".");
-                if (!sender.hasPermission("bettershulkerboxes.reload")) {
+                if (sender.hasPermission("bettershulkerboxes.reload")) {
                     sender.sendMessage(cfgi.prefix + ChatColor.AQUA + "Use " + ChatColor.YELLOW + "/bsb reload" + ChatColor.AQUA + " to reload the configuration.");
                 }
             } else {
                 if (!sender.hasPermission("bettershulkerboxes.reload")) {
-
                     sender.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
                     return false;
                 }
@@ -33,6 +32,8 @@ public class MainCommand implements CommandExecutor {
                     plugin.checkConfigValidity();
                     return false;
                 }
+                this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
+                this.cfgi = plugin.cfgi;
                 plugin.checkConfigValidity();
                 plugin.newInstances();
                 sender.sendMessage(cfgi.prefix + cfgi.configreload);

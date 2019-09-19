@@ -141,4 +141,9 @@ public class InteractEvent implements Listener {
             }
         }, (cfgi.cfg_cooldown / 1000) * 20);
     }
+
+    public void getNewInstances() {
+        this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
+        this.cfgi = plugin.cfgi;
+    }
 }

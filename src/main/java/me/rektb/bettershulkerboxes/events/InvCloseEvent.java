@@ -39,4 +39,9 @@ public class InvCloseEvent implements Listener {
             }
         }
     }
+
+    public void getNewInstances() {
+        this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
+        this.cfgi = plugin.cfgi;
+    }
 }

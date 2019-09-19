@@ -16,6 +16,11 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public BetterShulkerBoxes cfginst;
     public MainCommand maincmd;
 
+    public InteractEvent interactEvent;
+    public InvCloseEvent invCloseEvent;
+    public DupePreventEvents dupePreventEvents;
+    public PlyrJoinEvent plyrJoinEvent;
+
     public boolean updatefound = false;
     public String lastver = "";
     public String resourceurl = "";
@@ -28,13 +33,17 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         checkConfigValidity();
 
         shlkm = new ShulkerManage();
-
+        interactEvent = new InteractEvent();
+        invCloseEvent = new InvCloseEvent();
+        dupePreventEvents = new DupePreventEvents();
+        plyrJoinEvent = new PlyrJoinEvent();
         maincmd = new MainCommand();
+
         getCommand(maincmd.command).setExecutor(new MainCommand());
-        getServer().getPluginManager().registerEvents(new InteractEvent(), this);
-        getServer().getPluginManager().registerEvents(new InvCloseEvent(), this);
-        getServer().getPluginManager().registerEvents(new DupePreventEvents(), this);
-        getServer().getPluginManager().registerEvents(new PlyrJoinEvent(), this);
+        getServer().getPluginManager().registerEvents(interactEvent, this);
+        getServer().getPluginManager().registerEvents(invCloseEvent, this);
+        getServer().getPluginManager().registerEvents(dupePreventEvents, this);
+        getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Better Shulkerboxes enabled - Plugin written by Rektb");
 
@@ -81,6 +90,14 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         }
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "Disabling plugin");
         Bukkit.getPluginManager().disablePlugin(this);
+    }
+
+    public void newInstances() {
+        this.maincmd.getNewInstances();
+        this.dupePreventEvents.getNewInstances();
+        this.interactEvent.getNewInstances();
+        this.invCloseEvent.getNewInstances();
+        this.shlkm.getNewInstances();
     }
 
 }

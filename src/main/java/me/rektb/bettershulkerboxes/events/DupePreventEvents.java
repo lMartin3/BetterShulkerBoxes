@@ -84,4 +84,9 @@ public class DupePreventEvents implements Listener {
         }
         e.setCancelled(true);
     }
+
+    public void getNewInstances() {
+        this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
+        this.cfgi = plugin.cfgi;
+    }
 }

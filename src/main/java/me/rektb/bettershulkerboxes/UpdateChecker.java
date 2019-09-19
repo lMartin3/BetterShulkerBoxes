@@ -52,4 +52,6 @@ public class UpdateChecker {
         this.newVersion = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
         return !this.plugin.getDescription().getVersion().equals(this.newVersion);
     }
+
+
 }

@@ -146,14 +146,9 @@ public class ShulkerManage {
         swap.remove(p.getName());
     }
 
-
-
-
-
-
-
-
-
-
+    public void getNewInstances() {
+        this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
+        this.cfgi = plugin.cfgi;
+    }
 
 }

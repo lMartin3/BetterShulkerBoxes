@@ -12,12 +12,16 @@ public class ConfigurationImport {
     public final String cfg_closemsg = plugin.getConfig().getString("close_msg");
     public final String cfg_nopermsmsg = plugin.getConfig().getString("no_permission_msg");
     public final String cfg_cooldownmsg = plugin.getConfig().getString("cooldown_msg");
+    public final String cfg_configreloadmsg = plugin.getConfig().getString("config_reload_msg");
+    public final String cfg_configreloaderrormsg = plugin.getConfig().getString("config_reload_error_msg");
     public String prefix = ChatColor.translateAlternateColorCodes('&', cfg_prefix);
     public String invname = ChatColor.translateAlternateColorCodes('&', cfg_invname);
     public String openmsg = ChatColor.translateAlternateColorCodes('&', cfg_openmsg);
     public String closemsg = ChatColor.translateAlternateColorCodes('&', cfg_closemsg);
     public String nopermsmsg = ChatColor.translateAlternateColorCodes('&', cfg_nopermsmsg);
     public String cooldownmsg = ChatColor.translateAlternateColorCodes('&', cfg_cooldownmsg);
+    public String configreload = ChatColor.translateAlternateColorCodes('&', cfg_configreloadmsg);
+    public String configreloaderror = ChatColor.translateAlternateColorCodes('&', cfg_configreloaderrormsg);
     public final int cfg_cooldown = plugin.getConfig().getInt("cooldown");
 
     public final String cfg_opensound = plugin.getConfig().getString("open_sound");

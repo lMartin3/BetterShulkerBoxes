@@ -3,6 +3,7 @@ package me.rektb.bettershulkerboxes.events;
 import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
 import me.rektb.bettershulkerboxes.ConfigurationImport;
 import me.rektb.bettershulkerboxes.ShulkerManage;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.ShulkerBox;
 import org.bukkit.entity.Player;
@@ -58,13 +59,15 @@ public class InteractEvent implements Listener {
                 }
             }
             if ((cfgi.cfg_enablecooldown) &&
-                    (this.cooldownlist.contains(p)) &&
+                    (this.cooldownlist.contains(p.getName())) &&
                     (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
                 if (cfgi.cfg_cooldoenmsg_enabled) {
                     p.sendMessage(cfgi.prefix + cfgi.cooldownmsg);
                 }
                 return;
             }
+            cooldownlist.add(p.getName());
+            removeCooldownLater(p);
             String getitemname = holding.getItemMeta().getDisplayName();
             plugin.shlkm.openShulker(p, holding);
         }
@@ -115,17 +118,27 @@ public class InteractEvent implements Listener {
         }
 
         if ((cfgi.cfg_enablecooldown) &&
-                (this.cooldownlist.contains(p)) &&
+                (this.cooldownlist.contains(p.getName())) &&
                 (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
             if (cfgi.cfg_cooldoenmsg_enabled) {
                 p.sendMessage(cfgi.prefix + cfgi.cooldownmsg);
             }
             return;
         }
-
+        cooldownlist.add(p.getName());
+        removeCooldownLater(p);
         shlkm.shulkerSwap(p, e.getSlot());
-
         shlkm.openShulker(p, p.getInventory().getItemInMainHand());
         e.getClickedInventory();
+    }
+
+
+    public void removeCooldownLater(Player p) {
+        Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
+            @Override
+            public void run() {
+                cooldownlist.remove(p.getName());
+            }
+        }, (cfgi.cfg_cooldown / 1000) * 20);
     }
 }

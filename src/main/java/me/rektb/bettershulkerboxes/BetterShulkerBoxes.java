@@ -1,5 +1,6 @@
 package me.rektb.bettershulkerboxes;
 
+import me.rektb.bettershulkerboxes.commands.MainCommand;
 import me.rektb.bettershulkerboxes.events.DupePreventEvents;
 import me.rektb.bettershulkerboxes.events.InteractEvent;
 import me.rektb.bettershulkerboxes.events.InvCloseEvent;
@@ -13,6 +14,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
     //instance given to ConfigurationImport
     public BetterShulkerBoxes cfginst;
+    public MainCommand maincmd;
 
     public boolean updatefound = false;
     public String lastver = "";
@@ -23,18 +25,19 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
     public void onEnable() {
         loadConfig();
-        cfginst = this;
-        cfgi = new ConfigurationImport();
-        if (!cfgi.checkConfigurationValidity().isEmpty()) {
-            throwConfigurationErrror(cfgi.checkConfigurationValidity());
-        }
+        checkConfigValidity();
+
         shlkm = new ShulkerManage();
+
+        maincmd = new MainCommand();
+        getCommand(maincmd.command).setExecutor(new MainCommand());
         getServer().getPluginManager().registerEvents(new InteractEvent(), this);
         getServer().getPluginManager().registerEvents(new InvCloseEvent(), this);
         getServer().getPluginManager().registerEvents(new DupePreventEvents(), this);
         getServer().getPluginManager().registerEvents(new PlyrJoinEvent(), this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Better Shulkerboxes enabled - Plugin written by Rektb");
+
         Bukkit.getScheduler().runTaskAsynchronously(this, new Runnable() {
             public void run() {
                 BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "BSB is checking for updates...");
@@ -57,7 +60,15 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "Better Shulkerboxes disabled");
     }
 
-    private void loadConfig() {
+    public void checkConfigValidity() {
+        cfginst = this;
+        cfgi = new ConfigurationImport();
+        if (!cfgi.checkConfigurationValidity().isEmpty()) {
+            throwConfigurationErrror(cfgi.checkConfigurationValidity());
+        }
+    }
+
+    public void loadConfig() {
         getConfig().options().copyDefaults(true);
         saveConfig();
     }

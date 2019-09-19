@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.block.ShulkerBox;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BlockStateMeta;
@@ -72,9 +73,9 @@ public class ShulkerManage {
 
         Inventory inv;
         if (invname.equals("") || invname.equals(" ")) {
-            inv = Bukkit.createInventory(null, 27, "Shulkerbox");
+            inv = Bukkit.createInventory(null, InventoryType.SHULKER_BOX, "Shulkerbox");
         } else {
-            inv = Bukkit.createInventory(null, 27, invname);
+            inv = Bukkit.createInventory(null, InventoryType.SHULKER_BOX, invname);
         }
 
         inv.setContents(shulker.getInventory().getContents());

@@ -7,6 +7,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
@@ -15,6 +17,30 @@ public class DupePreventEvents implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     private ConfigurationImport cfgi = plugin.cfgi;
     private ShulkerManage shlkm = plugin.shlkm;
+
+    @EventHandler
+    public void swapDupe(InventoryClickEvent e) {
+        if (!e.getClick().equals(ClickType.NUMBER_KEY)) {
+            return;
+        }
+        if (!e.getAction().equals(InventoryAction.HOTBAR_SWAP)) {
+            return;
+        }
+        Player p = (Player) e.getWhoClicked();
+        if (p.getInventory().getItem(e.getHotbarButton()) == null) {
+            return;
+        }
+        if (!shlkm.isHoldingShulker(p, p.getInventory().getItemInMainHand())) {
+            return;
+        }
+        if (!shlkm.isInventoryShulker(p.getInventory().getItem(e.getHotbarButton()), p.getOpenInventory().getTitle())) {
+            return;
+        }
+        if (!p.getInventory().getItemInMainHand().equals(p.getInventory().getItem(e.getHotbarButton()))) {
+            return;
+        }
+        e.setCancelled(true);
+    }
 
     @EventHandler
     public void dropDupe(PlayerDropItemEvent e) {

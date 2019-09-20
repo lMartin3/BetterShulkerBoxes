@@ -69,7 +69,8 @@ public class InteractEvent implements Listener {
             cooldownlist.add(p.getName());
             removeCooldownLater(p);
             String getitemname = holding.getItemMeta().getDisplayName();
-            plugin.shlkm.openShulker(p, holding);
+            int slot = p.getInventory().getHeldItemSlot();
+            plugin.shlkm.openShulker(p, holding, slot);
         }
     }
 
@@ -128,7 +129,7 @@ public class InteractEvent implements Listener {
         cooldownlist.add(p.getName());
         removeCooldownLater(p);
         shlkm.shulkerSwap(p, e.getSlot());
-        shlkm.openShulker(p, p.getInventory().getItemInMainHand());
+        shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
         e.getClickedInventory();
     }
 

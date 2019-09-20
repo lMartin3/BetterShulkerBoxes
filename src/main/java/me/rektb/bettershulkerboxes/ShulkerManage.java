@@ -56,7 +56,7 @@ public class ShulkerManage {
 
 
     //Open shulkerbox
-    public void openShulker(Player p, ItemStack shulkerStack) {
+    public void openShulker(Player p, ItemStack shulkerStack, int slot) {
         BlockStateMeta im = (BlockStateMeta) shulkerStack.getItemMeta();
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         String invname = "";
@@ -80,6 +80,7 @@ public class ShulkerManage {
 
         inv.setContents(shulker.getInventory().getContents());
         p.openInventory(inv);
+        p.getInventory().setHeldItemSlot(slot);
 
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable() {
             public void run() {

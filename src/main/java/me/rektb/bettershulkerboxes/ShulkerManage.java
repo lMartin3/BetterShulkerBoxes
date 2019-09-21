@@ -123,7 +123,7 @@ public class ShulkerManage {
         }
         checkname = checkname.replace("%itemname%", holdingitemname);
         if (checkname.isEmpty()) {
-            checkname = "Shulkerbox";
+            checkname = InventoryType.SHULKER_BOX.getDefaultTitle();
         }
         return inventoryname.equals(checkname);
     }

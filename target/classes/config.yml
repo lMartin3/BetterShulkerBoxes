@@ -9,7 +9,7 @@
 # bettershulkerboxes.updatenotify: Allows players to receive notification about new versions. (Recommended for admins)
 # bettershulkerboxes.reload: Allows players to reload the config. (Recommended for admins)
 
-version: 2.4.0 # Do not touch
+version: 2.5.0 # Do not touch
 
 prefix: '&8[&3BSB&8] ' # Prefix of the messages in chat
 inventory_name: '&7Shulkerbox' # Name of the inventory (can use %itemname% to use item's name)

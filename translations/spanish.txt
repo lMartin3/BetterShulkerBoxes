@@ -1,0 +1,8 @@
+prefix: '&8[&3BSB&8] ' # Prefix of the messages in chat
+inventory_name: '&7Caja de Shulker' # Name of the inventory (can use %itemname% to use item's name)
+open_msg: '&eAbriendo caja de shulker...' # Put 'none' to disable (with the quotes)
+close_msg: '&eCerrando caja de shulker...' # Put 'none' to disable (with the quotes)
+no_permission_msg: '&cPermiso denegado' # Message that players will get when they haven't got enough permissions
+cooldown_msg: '&cTienes que esperar para poder volver a hacer esto' # This is sent to the player if he tries to open the shulkerbox but the cooldown hasn't finished
+config_reload_msg: '&bConfiguración recargada con éxito' # Message sent to admin/console when the plugin configuration is reloaded successfully
+config_reload_error_msg: '&cHay un error en la configuración, mire la consola para más detalles' # Like above but not good

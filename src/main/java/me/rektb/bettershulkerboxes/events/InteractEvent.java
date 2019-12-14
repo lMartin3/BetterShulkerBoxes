@@ -86,13 +86,19 @@ public class InteractEvent implements Listener {
         if (!e.getClick().equals(ClickType.RIGHT)) {
             return;
         }
-        if (!(p.getOpenInventory().getType().equals(InventoryType.CRAFTING) || p.getOpenInventory().getType().equals(InventoryType.CREATIVE))) {
+        //CHANGED
+        boolean invshulk = shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle());
+        if (!(p.getOpenInventory().getType().equals(InventoryType.CRAFTING) || invshulk || p.getOpenInventory().getType().equals(InventoryType.CREATIVE))) {
             return;
         }
         if (e.getCurrentItem() == null) {
             return;
         }
         if (!shlkm.isHoldingShulker(p, e.getCurrentItem())) {
+            return;
+        }
+        //CHANGED
+        if (!p.getOpenInventory().getType().equals(InventoryType.CRAFTING) && e.getSlot() == p.getInventory().getHeldItemSlot()) {
             return;
         }
 
@@ -128,8 +134,13 @@ public class InteractEvent implements Listener {
         }
         cooldownlist.add(p.getName());
         removeCooldownLater(p);
+        //CHANGED
+        if (invshulk){
+          shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
+        }
+
+        shlkm.openShulker(p, p.getInventory().getItem(e.getSlot()), p.getInventory().getHeldItemSlot());
         shlkm.shulkerSwap(p, e.getSlot());
-        shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
         e.getClickedInventory();
     }
 

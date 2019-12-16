@@ -19,7 +19,7 @@ public class InvCloseEvent implements Listener {
     public void onInvClose(InventoryCloseEvent e) {
         Player p = (Player) e.getPlayer();
         String nowinvname = e.getView().getTitle();
-        if (shlkm.isHoldingShulker(p, p.getInventory().getItemInMainHand())) {
+        if (shlkm.isHoldingShulker(p.getInventory().getItemInMainHand())) {
             Material holdingshulker = e.getPlayer().getInventory().getItemInMainHand().getType();
             String holdingitemname = "";
             ItemStack iteminmainhand = e.getPlayer().getInventory().getItemInMainHand();
@@ -39,7 +39,7 @@ public class InvCloseEvent implements Listener {
 
             if (nowinvname.equalsIgnoreCase(checkname)) {
                 shlkm.closeShulker(p, e.getPlayer().getInventory().getItemInMainHand(), e.getInventory());
-                shlkm.shulkerUnsawp(p);
+                shlkm.shulkerUnswap(p);
             }
         }
     }

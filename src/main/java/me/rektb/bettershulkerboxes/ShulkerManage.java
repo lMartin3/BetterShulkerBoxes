@@ -57,6 +57,7 @@ public class ShulkerManage {
 
     //Open shulkerbox
     public void openShulker(Player p, ItemStack shulkerStack, int slot) {
+        p.sendMessage("Opening shulkerbox " + " in slot " + slot);
         BlockStateMeta im = (BlockStateMeta) shulkerStack.getItemMeta();
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         String invname = "";
@@ -102,7 +103,7 @@ public class ShulkerManage {
 
 
     // Just to check if the player is holding a shulkerbox
-    public boolean isHoldingShulker(Player player, ItemStack eventItem) {
+    public boolean isHoldingShulker(ItemStack eventItem) {
         //if (player.getInventory().getItemInOffHand().equals(eventItem)) { return false; } // thanks like n105 for making me debug a stupid problem for 45 minutes.
         ItemStack eitem = eventItem;
         if (!(eventItem.getItemMeta() instanceof BlockStateMeta)) {
@@ -134,9 +135,10 @@ public class ShulkerManage {
         swap.put(p.getName(), slot);
         p.getInventory().setItem(slot, originalmh);
         p.getInventory().setItem(p.getInventory().getHeldItemSlot(), shulker);
+        p.sendMessage("SSW Shulker from " + slot + " to " + p.getInventory().getHeldItemSlot());
     }
 
-    public void shulkerUnsawp(Player p) {
+    public void shulkerUnswap(Player p) {
         if (!swap.containsKey(p.getName())) {
             return;
         }
@@ -144,6 +146,7 @@ public class ShulkerManage {
         ItemStack tomain = p.getInventory().getItem(swap.get(p.getName()));
         p.getInventory().setItem(p.getInventory().getHeldItemSlot(), tomain);
         p.getInventory().setItem(swap.get(p.getName()), shulker);
+        p.sendMessage("SUS Shulker from " + p.getInventory().getHeldItemSlot() + " to " + swap.get(p.getName()));
         swap.remove(p.getName());
     }
 

@@ -30,7 +30,7 @@ public class DupePreventEvents implements Listener {
         if (p.getInventory().getItem(e.getHotbarButton()) == null) {
             return;
         }
-        if (!shlkm.isHoldingShulker(p, p.getInventory().getItemInMainHand())) {
+        if (!shlkm.isHoldingShulker(p.getInventory().getItemInMainHand())) {
             return;
         }
         if (!shlkm.isInventoryShulker(p.getInventory().getItem(e.getHotbarButton()), p.getOpenInventory().getTitle())) {
@@ -79,11 +79,7 @@ public class DupePreventEvents implements Listener {
         if (!shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle())) {
             return;
         }
-        if (!shlkm.isHoldingShulker(p, e.getCurrentItem())) {
-            return;
-        }
-        //CHANGED
-        if (!(e.getSlot() == p.getInventory().getHeldItemSlot())){
+        if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
             return;
         }
         e.setCancelled(true);

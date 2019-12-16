@@ -48,7 +48,7 @@ public class InteractEvent implements Listener {
             return;
         }
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
-        if ((e.getAction().equals(Action.RIGHT_CLICK_AIR)) && shlkm.isHoldingShulker(p, e.getItem())) {
+        if ((e.getAction().equals(Action.RIGHT_CLICK_AIR)) && shlkm.isHoldingShulker(e.getItem())) {
             e.setCancelled(true);
             if (cfgi.cfg_requiresperms) {
                 if (!p.hasPermission("bettershulkerboxes.use")) {
@@ -86,21 +86,28 @@ public class InteractEvent implements Listener {
         if (!e.getClick().equals(ClickType.RIGHT)) {
             return;
         }
-        //CHANGED
-        boolean invshulk = shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle());
-        if (!(p.getOpenInventory().getType().equals(InventoryType.CRAFTING) || invshulk || p.getOpenInventory().getType().equals(InventoryType.CREATIVE))) {
+
+        boolean is_inventory_shulker = false;
+        boolean is_performing_switch = false;
+        if (p.getOpenInventory().getInventory(1) != null && p.getOpenInventory().getType().equals(InventoryType.SHULKER_BOX)) {
+            if (shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle())) {
+                is_inventory_shulker = true;
+            }
+        }
+        if (e.getCurrentItem() != null && is_inventory_shulker && shlkm.isHoldingShulker(e.getCurrentItem())) {
+            is_performing_switch = true;
+        }
+
+        if (!(p.getOpenInventory().getType().equals(InventoryType.CRAFTING) || is_inventory_shulker)) {
             return;
         }
         if (e.getCurrentItem() == null) {
             return;
         }
-        if (!shlkm.isHoldingShulker(p, e.getCurrentItem())) {
+        if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
             return;
         }
-        //CHANGED
-        if (!p.getOpenInventory().getType().equals(InventoryType.CRAFTING) && e.getSlot() == p.getInventory().getHeldItemSlot()) {
-            return;
-        }
+
 
         //from here, player is 100% trying to open the shulker box;
         e.setCancelled(true);
@@ -134,14 +141,15 @@ public class InteractEvent implements Listener {
         }
         cooldownlist.add(p.getName());
         removeCooldownLater(p);
-        //CHANGED
-        if (invshulk){
-          shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
-        }
 
-        shlkm.openShulker(p, p.getInventory().getItem(e.getSlot()), p.getInventory().getHeldItemSlot());
+        //TODO fix this with regular shulker boxes
+        if (p.getOpenInventory().getInventory(1) != null && is_performing_switch) {
+            p.sendMessage("PErforming switch");
+            //Close inventory without performing unswap
+            shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
+        }
         shlkm.shulkerSwap(p, e.getSlot());
-        e.getClickedInventory();
+        shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
     }
 
 

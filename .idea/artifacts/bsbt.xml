@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="bsbt">
-    <output-path>E:/mine/testing_1.13.2/plugins</output-path>
-    <root id="archive" name="bsbt.jar">
-      <element id="module-output" name="BSB" />
-    </root>
-  </artifact>
-</component>

@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="BetterShulkerBoxes:jar" />
-      <artifact name="bsbt" />
+      <artifact name="BetterShulkerBoxes.jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/BetterShulkerBoxes_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/bsbt.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,46 +27,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>yml</find>
-      <find>p.sEndMessage</find>
-      <find>private</find>
-      <find>finalcoo</find>
-      <find>this.cfg</find>
-      <find>this.plugin</find>
-      <find>cfgim</find>
-      <find>sendMess</find>
-      <find>se</find>
-      <find>sendMes</find>
-      <find>test</find>
-      <find>shulker</find>
-      <find>sendMessage</find>
-      <find>cooldownlist.</find>
-      <find>p.sendMessage</find>
-      <find>p.send</find>
-      <find>p.sendMessa</find>
-      <find>p.sendMe</find>
-      <find>cooldown</find>
-      <find>cfgi.cooldown_e</find>
-      <find>cfg_enablecooldown</find>
-      <find>77.83.2.11:40000</find>
-      <find>bettershulkerboxes</find>
-      <find>cfgi</find>
-      <find>Not</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>public</replace>
-      <replace>cfgi.cfg</replace>
-      <replace>plugin</replace>
-      <replace>cfgi</replace>
-      <replace>plugin.cfgi</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>E:\dev\_MC\projects\BSB\src\main\java\me\rektb\bettershulkerboxes</dir>
-      <dir>E:\dev\_MC\projects\BSB\src</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -306,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576385667112</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Changed .gitignore">
+      <created>1576385836319</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1576385836319</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -343,19 +315,40 @@
     <MESSAGE value="Reverted api version change" />
     <MESSAGE value="Reverted merge in main branch" />
     <MESSAGE value="I should learn how to use git properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="I should learn how to use git properly" />
+    <MESSAGE value="Changed .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed .gitignore" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="555" y="180" width="800" height="672" key="#Project_Structure" timestamp="1576385978009">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="180" width="800" height="672" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1576385978009" />
+    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576385867131">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="418" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385867131" />
+    <state x="687" y="303" width="525" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1576385924166">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="303" width="525" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385924166" />
+    <state x="694" y="211" width="522" height="611" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576452386389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="211" width="522" height="611" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576452386389" />
     <state x="808" y="411" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576385491126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="411" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385491126" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576385667044">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576532266804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576385667044" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576532266804" />
+    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576521809455">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576521809455" />
     <state width="1878" height="276" key="GridCell.Tab.0.bottom" timestamp="1576298091334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -384,112 +377,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576296250203" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576385724895">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576385843332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576385724895" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576296268579">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576385843332" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576519292124">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576296268579" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576519292124" />
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576385712721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576385712721" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor>
-            <show-content>
-              <type id="artifact" />
-              <type id="library" />
-            </show-content>
-          </artifact-editor>
-          <last-edited>BetterShulkerBoxes:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Minecraft</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>BSB</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.google.code.gson:gson:2.8.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1576521805208">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576521805208" />
+    <state x="624" y="238" key="run.anything.popup" timestamp="1576524697666">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="238" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576524697666" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1576530690681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576530690681" />
   </component>
 </project>

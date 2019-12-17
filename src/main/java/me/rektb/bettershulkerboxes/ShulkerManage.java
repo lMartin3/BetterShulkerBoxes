@@ -32,7 +32,7 @@ public class ShulkerManage {
         BlockStateMeta bsm = (BlockStateMeta) itemStack.getItemMeta();
         ShulkerBox box = (ShulkerBox) bsm.getBlockState();
         box.getInventory().setContents(shulkerInventory.getContents());
-        if (getitemname != "") {
+        if (getitemname != " ") {
             bsm.setDisplayName(getitemname);
         }
         bsm.setBlockState(box);

@@ -37,8 +37,8 @@ public class InvCloseEvent implements Listener {
                 checkname = checkname.replace("%itemname%", holdingitemname);
             }
 
+            p.sendMessage("Event triggered");
             if (nowinvname.equalsIgnoreCase(checkname)) {
-                p.sendMessage("equals");
                 shlkm.closeShulker(p, e.getPlayer().getInventory().getItemInMainHand(), e.getInventory());
                 shlkm.shulkerUnswap(p);
             }

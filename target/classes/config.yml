@@ -29,3 +29,15 @@ enable_read_only: false # [Boolean] Enable 'read-only' mode, allowing players to
 enable_rclick_air_open: true # [Boolean] Enable the original feature to open shulkerboxes by rightclicking into the air while holding them? (Recommended)
 enable_rightclick_open: true # [Boolean] Enable the 2.0 feature to open shulkerboxes by rightclicking them inside the inventory? (Recommended)
 rightclick_requires_permission: false # Right-click feature requires permissions? (Not recommended)
+
+# Since 2.7.0 Better Shulker Boxes automatically recollects server information. This is with the only purpose of helping development.
+# The data sent is completely anonymous, and it does not include compromising information.
+# The data recollected is limited to:
+# Server statistics: Player amount, online mode, Minecraft version, software (spigot, sponge, etc).
+# Hosting statistics: Number of cores of the CPU, system architecture, operating system, server location (by country) and java version.
+# Plugin (BSB only) statistics: Plugin version, some configuration parameters.
+# For more information about statistics visit https://bstats.org/
+
+# Although this data helps development I understand concerns about privacy.
+# If you choose not to participate on statistics set the following parameter to false.
+enable_statistics: true

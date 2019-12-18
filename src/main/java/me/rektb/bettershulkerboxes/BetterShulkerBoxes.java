@@ -2,7 +2,6 @@ package me.rektb.bettershulkerboxes;
 
 import me.rektb.bettershulkerboxes.commands.MainCommand;
 import me.rektb.bettershulkerboxes.events.*;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;

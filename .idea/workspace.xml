@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvClickEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvClickEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BSB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BSB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576700590085</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Finished adding 'read_only'">
+      <created>1576701509283</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576701509283</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -353,7 +359,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Huge commit:&#10;* Finished ShulkerManage class, now voids to open and close shulker boxes are located in that class.&#10;* Added invalid configuration parameters detection&#10;* Expression '%itemname%' can now be used in configuration parameters invname, open_msg and close_msg and it will display item's name&#10;* Sounds and messages will now disable typing 'none' (w/ no quotes) in the parameter instead of having a separated boolean&#10;* Reformatted code for most classes&#10;* Removed huge blocks of junk code&#10;* Classes now get instance of main class differently&#10;* Now the plugin will disable itself if the configuration is invalid" />
     <MESSAGE value="* Fixed a bug where non-renamed shulker boxes would not close properly&#10;* Reformatted DupePreventEvents class" />
     <MESSAGE value="More significant changes:&#10;* Completely finished right-click in inventory to open feature&#10;* Added 'version' parameter to config.yml&#10;* Fixed all duplication bugs&#10;* Fixed illegal nesting&#10;* Modified ShulkerManage helper functions to work properly with the new added feature&#10;* Modified inventory close event so it works with the current feature too&#10;* Fixed a bug where rightclicking shulkerboxes wouldn't open them unless the player was holding an item&#10;* Now %itemname% expression should work properly on open and close messages and inventory name, and it does no longer cause problems&#10;Note: I've chosen to swap the shulkerbox and item in main hand to open it as it's easier to do and it won't have any problems with the actual dupe prevention methods." />
     <MESSAGE value="Just in case commit" />
@@ -378,7 +383,8 @@
     <MESSAGE value="Minor changes&#10;- Removed a debug message&#10;- Updated version parameter on plugin.yml" />
     <MESSAGE value="Added 'check' subcommand to check for updates." />
     <MESSAGE value="Added 'enable_rclick_air_open' parameter in config.yml to enable/disable the right click into air feature. Added functionality too.&#10;Started working on the 'read_only' feature." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 'enable_rclick_air_open' parameter in config.yml to enable/disable the right click into air feature. Added functionality too.&#10;Started working on the 'read_only' feature." />
+    <MESSAGE value="Finished adding 'read_only'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished adding 'read_only'" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -403,10 +409,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="411" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385491126" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576700589991">
+    <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576701520243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576700589991" />
+    <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576701509153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576701509153" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576521809455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -439,10 +449,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576296250203" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576700600034">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576701514199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576700600034" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576701514199" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576694286097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -7,13 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/Metrics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/chinese.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/english.txt" beforeDir="false" afterPath="$PROJECT_DIR$/translations/english.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/spanish.txt" beforeDir="false" afterPath="$PROJECT_DIR$/translations/spanish.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576704388876</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Directly copying the class because I can't get the maven method to work">
+      <created>1576705740279</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1576705740279</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -376,7 +382,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Just in case commit" />
     <MESSAGE value="Aaaaaaaaa" />
     <MESSAGE value="Fixed plugin version" />
     <MESSAGE value="Fixed duping with unnamed shulkerboxes" />
@@ -401,7 +406,8 @@
     <MESSAGE value="Finished adding 'read_only'" />
     <MESSAGE value="Updated pom.xml to shade bStats for plugin metrics" />
     <MESSAGE value="Added statistic recollecting and an option to disable it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added statistic recollecting and an option to disable it." />
+    <MESSAGE value="Directly copying the class because I can't get the maven method to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Directly copying the class because I can't get the maven method to work" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -430,10 +436,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576704388768">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576705740073">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576704388768" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576705740073" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576521809455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -466,10 +472,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576296250203" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576702914761">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576705748447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576702914761" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576705748447" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576694286097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

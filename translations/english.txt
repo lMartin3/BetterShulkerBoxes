@@ -1,3 +1,4 @@
+# Made by Rektb on Spigot
 prefix: '&8[&3BSB&8] ' # Prefix of the messages in chat
 inventory_name: '&7Shulkerbox' # Name of the inventory (can use %itemname% to use item's name)
 open_msg: '&eOpening shulkerbox...' # Put 'none' to disable (with the quotes)

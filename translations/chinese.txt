@@ -1,0 +1,9 @@
+# Made by Alpha5402 on Spigot
+prefix: '&8[&3BSB&8] '
+inventory_name: '&7潜影盒'
+open_msg: '&e你打开了潜影盒...' # 设置为'none'以禁用 (带引号)
+close_msg: '&e你关掉了潜影盒...' # 设置为'none'以禁用 (带引号)
+no_permission_msg: '&c你没有权限这样做' # 玩家没有权限时收到的提示
+cooldown_msg: '&c潜影盒还没有准备好哟' # 玩家试图打开潜影盒但冷却未结束时发送的提示
+config_reload_msg: '&b插件配置成功重载' # 插件重载时的提示
+config_reload_error_msg: '&c插件的配置出了一点问题,查看后台以排查' # 同上,但这是出现问题发送的提示

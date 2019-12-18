@@ -20,7 +20,7 @@ cooldown_msg: '&cYou have to wait until you can use this again' # This is sent t
 config_reload_msg: '&bConfiguration reloaded successfully' # Message sent to admin/console when the plugin configuration is reloaded successfully
 config_reload_error_msg: '&cThere is an error in the configuration, see the console for details' # Like above but not good
 
-cooldown: 5 # [Integer] In ms (milliseconds) the time players have to wait after opening a shulkerbox to open another
+cooldown: 5 # [Integer] In ms (milliseconds) the time players have to wait open another shulkerbox after opening one.
 open_sound: 'BLOCK_SHULKER_BOX_OPEN' # [String (sound)] Like messages, put 'none' (with the quotes) to disable
 close_sound: 'BLOCK_SHULKER_BOX_CLOSE' # [String (sound)] Like messages, put 'none' (with the quotes) to disable
 cooldown_enabled: true # [Boolean] To enable or not the cooldown (Recommended)

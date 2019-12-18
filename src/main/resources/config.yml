@@ -25,5 +25,7 @@ open_sound: 'BLOCK_SHULKER_BOX_OPEN' # [String (sound)] Like messages, put 'none
 close_sound: 'BLOCK_SHULKER_BOX_CLOSE' # [String (sound)] Like messages, put 'none' (with the quotes) to disable
 cooldown_enabled: true # [Boolean] To enable or not the cooldown (Recommended)
 requires_permission: true # [Boolean] Do players require permission to open shulkerboxes using the plugin? (Recommended)
+enable_read_only: false # [Boolean] Enable 'read-only' mode, allowing players to see contents but not to modify them. They will have to place the shulkerbox. (Not recommended)
+enable_rclick_air_open: true # [Boolean] Enable the original feature to open shulkerboxes by rightclicking into the air while holding them? (Recommended)
 enable_rightclick_open: true # [Boolean] Enable the 2.0 feature to open shulkerboxes by rightclicking them inside the inventory? (Recommended)
 rightclick_requires_permission: false # Right-click feature requires permissions? (Not recommended)

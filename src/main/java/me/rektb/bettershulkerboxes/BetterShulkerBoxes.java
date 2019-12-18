@@ -1,10 +1,7 @@
 package me.rektb.bettershulkerboxes;
 
 import me.rektb.bettershulkerboxes.commands.MainCommand;
-import me.rektb.bettershulkerboxes.events.DupePreventEvents;
-import me.rektb.bettershulkerboxes.events.InteractEvent;
-import me.rektb.bettershulkerboxes.events.InvCloseEvent;
-import me.rektb.bettershulkerboxes.events.PlyrJoinEvent;
+import me.rektb.bettershulkerboxes.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -17,6 +14,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public MainCommand maincmd;
 
     public InteractEvent interactEvent;
+    public InvClickEvent invClickEvent;
     public InvCloseEvent invCloseEvent;
     public DupePreventEvents dupePreventEvents;
     public PlyrJoinEvent plyrJoinEvent;
@@ -34,6 +32,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
         shlkm = new ShulkerManage();
         interactEvent = new InteractEvent();
+        invClickEvent = new InvClickEvent(this);
         invCloseEvent = new InvCloseEvent();
         dupePreventEvents = new DupePreventEvents();
         plyrJoinEvent = new PlyrJoinEvent();
@@ -41,8 +40,10 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
         getCommand(maincmd.command).setExecutor(new MainCommand());
         getServer().getPluginManager().registerEvents(interactEvent, this);
+        getServer().getPluginManager().registerEvents(invClickEvent, this);
         getServer().getPluginManager().registerEvents(invCloseEvent, this);
         getServer().getPluginManager().registerEvents(dupePreventEvents, this);
+        getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
         getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Better Shulkerboxes enabled - Plugin written by Rektb");

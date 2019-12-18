@@ -49,6 +49,9 @@ public class InteractEvent implements Listener {
         }
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         if ((e.getAction().equals(Action.RIGHT_CLICK_AIR)) && shlkm.isHoldingShulker(e.getItem())) {
+            if (!cfgi.cfg_rclickair) {
+                return;
+            }
             e.setCancelled(true);
             if (cfgi.cfg_requiresperms) {
                 if (!p.hasPermission("bettershulkerboxes.use")) {

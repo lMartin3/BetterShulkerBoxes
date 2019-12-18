@@ -46,7 +46,6 @@ public class InvCloseEvent implements Listener {
                     //Do nothing about it
                 }
                 if (!mat.toString().contains("SHULKER_BOX")) {
-                    p.sendMessage(mat.toString());
                     shlkm.shulkerUnswap(p);
                 }
 

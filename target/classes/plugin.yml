@@ -1,13 +1,13 @@
 name: BetterShulkerBoxes
 author: Rektb
-version: 2.6.0
+version: 2.7.0
 description: Open your shulkerboxes easier!
 main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
 api-version: 1.13
 commands:
   bsb:
     description: Main command for Better Shulker Boxes
-    use: /bsb (reload)
+    use: /bsb (subcommand)
 permissions:
   bettershulkerboxes.*:
     description: Grants all BSB permissions

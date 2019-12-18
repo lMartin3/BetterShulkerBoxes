@@ -24,7 +24,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public boolean updatefound = false;
     public String lastver = "";
     public String resourceurl = "";
-    private UpdateChecker updater = new UpdateChecker(this, 58837);
+    public UpdateChecker updater = new UpdateChecker(this, 58837);
     public ConfigurationImport cfgi;
     public ShulkerManage shlkm;
 
@@ -52,10 +52,12 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                 BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "BSB is checking for updates...");
                 try {
                     if (BetterShulkerBoxes.this.updater.checkForUpdates()) {
-                        BetterShulkerBoxes.this.getLogger().info(ChatColor.GREEN + "Update found! New version: " + BetterShulkerBoxes.this.updater.getLatestVersion() + " download: " + BetterShulkerBoxes.this.updater.getResourceURL());
+                        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Update found! You're using " + getDescription().getVersion() + " New version: " + BetterShulkerBoxes.this.updater.getLatestVersion() + ", download at: " + BetterShulkerBoxes.this.updater.getResourceURL());
                         BetterShulkerBoxes.this.updatefound = true;
                         BetterShulkerBoxes.this.lastver = BetterShulkerBoxes.this.updater.getLatestVersion();
                         BetterShulkerBoxes.this.resourceurl = BetterShulkerBoxes.this.updater.getResourceURL();
+                    } else {
+                        BetterShulkerBoxes.this.getLogger().info(ChatColor.GREEN + "Better Shulker Boxes is up to date!");
                     }
                 } catch (Exception e) {
                     BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not check for updates:");

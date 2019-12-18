@@ -14,7 +14,10 @@ public class PlyrJoinEvent
         String cfg_prefix = plugin.getConfig().getString("prefix");
         String prefix = ChatColor.translateAlternateColorCodes('&', cfg_prefix);
         if ((e.getPlayer().hasPermission("bettershulkerboxes.updatenotify")) && (plugin.updatefound)) {
-            e.getPlayer().sendMessage(prefix + ChatColor.AQUA + "Version " + ChatColor.YELLOW + (plugin).lastver + ChatColor.AQUA + " is avaible! Currentli Download at " + ChatColor.YELLOW + (plugin).resourceurl);
+            e.getPlayer().sendMessage(prefix + ChatColor.AQUA + "Version " + ChatColor.YELLOW +
+                    (plugin).lastver + ChatColor.AQUA + " is available! Currently using " + ChatColor.YELLOW +
+                    plugin.getDescription().getVersion() + ChatColor.AQUA +
+                    " Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
         }
     }
 }

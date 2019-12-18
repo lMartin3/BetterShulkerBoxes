@@ -8,10 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/BetterShulkerBoxes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InvCloseEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InvCloseEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576640840335</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Minor changes&#10;- Removed a debug message&#10;- Updated version parameter on plugin.yml">
+      <created>1576641671733</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1576641671733</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -332,7 +345,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="test" />
     <MESSAGE value="Added ShulkerManage class to make a shulkerbox open and close method.&#10;Added ConfigurationImport to prevent using a lot of unnecessary code.&#10;Updated plugin.yml - version to 2.0.1-SNAPSHOT" />
     <MESSAGE value="Huge commit, finished adding the open and close functions. Added option to use the item name as inventory name." />
     <MESSAGE value="Huge commit:&#10;* Finished ShulkerManage class, now voids to open and close shulker boxes are located in that class.&#10;* Added invalid configuration parameters detection&#10;* Expression '%itemname%' can now be used in configuration parameters invname, open_msg and close_msg and it will display item's name&#10;* Sounds and messages will now disable typing 'none' (w/ no quotes) in the parameter instead of having a separated boolean&#10;* Reformatted code for most classes&#10;* Removed huge blocks of junk code&#10;* Classes now get instance of main class differently&#10;* Now the plugin will disable itself if the configuration is invalid" />
@@ -357,7 +369,8 @@
     <MESSAGE value="Shulker swapping.&#10;Minor bugs fixed.&#10;Still having problems with non renamed shulkerboxes." />
     <MESSAGE value="Grammar corrections, just to test discord webhook really" />
     <MESSAGE value="It works now.&#10;It probably works now.&#10;It may work now.&#10;It should work now." />
-    <option name="LAST_COMMIT_MESSAGE" value="It works now.&#10;It probably works now.&#10;It may work now.&#10;It should work now." />
+    <MESSAGE value="Minor changes&#10;- Removed a debug message&#10;- Updated version parameter on plugin.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes&#10;- Removed a debug message&#10;- Updated version parameter on plugin.yml" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -382,10 +395,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="411" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385491126" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576640839962">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576641671663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576640839962" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576641671663" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576521809455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -418,14 +431,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576296250203" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576640850422">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576641678088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576640850422" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576629687394">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576641678088" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576694286097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576629687394" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576694286097" />
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576385712721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

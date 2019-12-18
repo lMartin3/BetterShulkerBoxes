@@ -4,7 +4,8 @@ import org.bukkit.ChatColor;
 
 public class ConfigurationImport {
     BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
-    String errors;
+    String errors = "";
+    String checkfor = "prefix inventory_name open_msg close_msg no_permission_msg cooldown_msg config_reload_msg config_reload_error_msg";
 
     public final String cfg_prefix = plugin.getConfig().getString("prefix");
     public final String cfg_invname = plugin.getConfig().getString("inventory_name");
@@ -41,38 +42,19 @@ public class ConfigurationImport {
     public final boolean cfg_cooldoenmsg_enabled = getEnabled("cooldown_msg");
 
     public String checkConfigurationValidity() {
-        errors = "";
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid prefix -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid inventory_name -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid open_msg (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid close_msg (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid no_permission_msg (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid cooldown_msg (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid open_sound (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("prefix") == null) {
-            errors += "invalid close_sound (use 'none' to disable) -";
-        }
-        if (plugin.getConfig().getString("cooldown_enabled") == null) {
-            errors += "invalid cooldown_enabled -";
-        }
-        if (plugin.getConfig().getString("requires_permission") == null) {
-            errors += "invalid requires_permission";
+        String[] cfl = checkfor.split(" ");
+        for (int i = 0; i < cfl.length; i++) {
+            checkStringValidity(cfl[i]);
         }
         return errors;
+    }
+
+    private boolean checkStringValidity(String str) {
+        if (plugin.getConfig().getString(str) == null) {
+            errors += String.format("invalid %s -", str);
+            return false;
+        }
+        return true;
     }
 
     private boolean getEnabled(String s) {

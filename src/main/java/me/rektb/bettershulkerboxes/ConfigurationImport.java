@@ -37,6 +37,7 @@ public class ConfigurationImport {
     public final boolean cfg_read_only = plugin.getConfig().getBoolean("enable_read_only");
     public final boolean cfg_rightclick_enabled = plugin.getConfig().getBoolean("enable_rightclick_open");
     public final boolean cfg_rightclick_requiresperms = plugin.getConfig().getBoolean("rightclick_requires_permission");
+    public final boolean cfg_statistics = plugin.getConfig().getBoolean("enable_statistics");
 
     public final boolean cfg_openmsg_enabled = getEnabled("open_msg");
     public final boolean cfg_closemsg_enabled = getEnabled("close_msg");

@@ -2,6 +2,7 @@ package me.rektb.bettershulkerboxes;
 
 import me.rektb.bettershulkerboxes.commands.MainCommand;
 import me.rektb.bettershulkerboxes.events.*;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -46,6 +47,12 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
         getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
 
+        if (cfgi.cfg_statistics) {
+            Metrics metrics = new Metrics(this);
+        } else {
+            getServer().getConsoleSender().sendMessage("Statistics have been disabled, please consider enabling them to" +
+                    "help plugin development.");
+        }
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Better Shulkerboxes enabled - Plugin written by Rektb");
 
         Bukkit.getScheduler().runTaskAsynchronously(this, new Runnable() {

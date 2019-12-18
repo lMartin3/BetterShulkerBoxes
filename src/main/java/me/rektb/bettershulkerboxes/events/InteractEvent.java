@@ -144,15 +144,10 @@ public class InteractEvent implements Listener {
 
         //TODO fix this with regular shulker boxes
         if (p.getOpenInventory().getInventory(1) != null && is_performing_switch) {
-            p.sendMessage("Performing switch");
             //Close inventory without performing unswap
+            shlkm.swap.remove(p.getName());
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
-            //TODO fix
-            if (p.getInventory().getItemInMainHand().getType().toString().contains("SHULKERBOX")) {
-                shlkm.shulkerSwap(p, e.getSlot());
-            }
         }
-        p.sendMessage("doing the things");
         shlkm.shulkerSwap(p, e.getSlot());
         shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
     }

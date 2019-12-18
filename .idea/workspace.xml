@@ -6,9 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
+    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="Grammar corrections, just to test discord webhook really">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576606088795</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Grammar corrections, just to test discord webhook really">
+      <created>1576606182033</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1576606182033</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -339,7 +349,8 @@
     <MESSAGE value="Remade the shulkerbox switching mechanism and fixed some bugs. Shulkerboxes now swap successfully, except for those without a custom display name, for some reason." />
     <MESSAGE value="Licensing &amp; debug&#10;Added LICENSE.txt and updated README.md for licensing purposes.&#10;Added and removed debug messages." />
     <MESSAGE value="Shulker swapping.&#10;Minor bugs fixed.&#10;Still having problems with non renamed shulkerboxes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Shulker swapping.&#10;Minor bugs fixed.&#10;Still having problems with non renamed shulkerboxes." />
+    <MESSAGE value="Grammar corrections, just to test discord webhook really" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grammar corrections, just to test discord webhook really" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -364,10 +375,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="411" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576385491126" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576606088344">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1576629779888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576606088344" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576629779888" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576521809455">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -400,22 +411,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576296250203" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576606099025">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576606188583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576606099025" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576605864105">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576606188583" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1576629687394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576605864105" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576629687394" />
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576385712721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576385712721" />
-    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1576542186247">
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1576640679126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576542186247" />
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576640679126" />
     <state x="624" y="238" key="run.anything.popup" timestamp="1576540618745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

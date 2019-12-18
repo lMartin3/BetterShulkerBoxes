@@ -37,10 +37,19 @@ public class InvCloseEvent implements Listener {
                 checkname = checkname.replace("%itemname%", holdingitemname);
             }
 
-            p.sendMessage("Event triggered");
             if (nowinvname.equalsIgnoreCase(checkname)) {
                 shlkm.closeShulker(p, e.getPlayer().getInventory().getItemInMainHand(), e.getInventory());
-                shlkm.shulkerUnswap(p);
+                Material mat = Material.AIR;
+                try {
+                    mat = p.getInventory().getItem(shlkm.swap.get(p.getName())).getType();
+                } catch (NullPointerException npe) {
+                    //Do nothing about it
+                }
+                if (!mat.toString().contains("SHULKER_BOX")) {
+                    p.sendMessage(mat.toString());
+                    shlkm.shulkerUnswap(p);
+                }
+
             }
         }
     }

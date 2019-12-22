@@ -44,6 +44,10 @@ public class MainCommand implements CommandExecutor {
                             (plugin).lastver + ChatColor.AQUA + " is available! Currently using " + ChatColor.YELLOW +
                             plugin.getDescription().getVersion() + ChatColor.AQUA +
                             " Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
+                    sender.sendMessage(ChatColor.AQUA + "Version changes: ");
+                    for (String s : plugin.updater.getChangelog()) {
+                        sender.sendMessage(ChatColor.YELLOW + "> " + s);
+                    }
                 } else {
                     sender.sendMessage(cfgi.prefix + ChatColor.GREEN + "You're using the latest version of " +
                             "BetterShulkerBoxes (" + ChatColor.YELLOW + plugin.getDescription().getVersion() + ChatColor.GREEN + ")");

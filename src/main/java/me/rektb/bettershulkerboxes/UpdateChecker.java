@@ -68,27 +68,23 @@ public class UpdateChecker {
         }
     }
 
-    public String[] getChangelog() {
-        String[] changes = {};
+    public ArrayList<String> getChangelog() {
+        ArrayList<String> lines = new ArrayList<>();
         try {
             URLConnection con = this.changelogURL.openConnection();
             InputStreamReader inSR = new InputStreamReader(con.getInputStream());
             BufferedReader bufferedReader = new BufferedReader(inSR);
             String inputLine;
             StringBuffer content = new StringBuffer();
-            ArrayList<String> lines = new ArrayList<>();
             while ((inputLine = bufferedReader.readLine()) != null) {
                 lines.add(inputLine);
             }
-            for (String line : lines) {
-                plugin.getServer().getConsoleSender().sendMessage(line);
-            }
             bufferedReader.close();
-            return changes;
+            return lines;
         } catch (IOException ioex) {
             plugin.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not retrieve the changelog:");
             plugin.getServer().getConsoleSender().sendMessage(ioex.toString());
-            return changes;
+            return lines;
         }
     }
 

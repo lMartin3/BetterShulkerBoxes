@@ -25,6 +25,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public PlyrJoinEvent plyrJoinEvent;
 
     public boolean updatefound = false;
+    public ArrayList<String> changes = new ArrayList<>();
     public String lastver = "";
     public String resourceurl = "";
     public UpdateChecker updater = new UpdateChecker(this, 58837);
@@ -42,13 +43,12 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         if (matches.size() > 0) {
             version = matches.get(0);
         }
-        getServer().getConsoleSender().sendMessage(String.valueOf(version.split("\\.")[1]));
-        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[0]) < 13) { // Just a warn when used in versions under 1.13
+        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[1]) < 13) { // Just a warn when used in versions under 1.13
             getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
                     " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
                     " for players duping items and/or thermonuclear war.", version));
+            getServer().getConsoleSender().sendMessage(version.split("\\.")[1]);
         }
-        getServer().getConsoleSender().sendMessage(matches.get(0));
 
         loadConfig();
         checkConfigValidity();
@@ -82,9 +82,9 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                 BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "BSB is checking for updates...");
                 try {
                     if (BetterShulkerBoxes.this.updater.checkForUpdates()) {
-                        updater.getChangelog();
                         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Update found! You're using " + getDescription().getVersion() + " New version: " + BetterShulkerBoxes.this.updater.getLatestVersion() + ", download at: " + BetterShulkerBoxes.this.updater.getResourceURL());
                         BetterShulkerBoxes.this.updatefound = true;
+                        BetterShulkerBoxes.this.changes = updater.getChangelog();
                         BetterShulkerBoxes.this.lastver = BetterShulkerBoxes.this.updater.getLatestVersion();
                         BetterShulkerBoxes.this.resourceurl = BetterShulkerBoxes.this.updater.getResourceURL();
                     } else {

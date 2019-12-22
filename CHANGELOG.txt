@@ -1,2 +1,2 @@
-This is a test
-This is the second test
+Added a warning that will be shown when the plugin is used in versions older than 1.13
+Now /bsb check shows a changelog

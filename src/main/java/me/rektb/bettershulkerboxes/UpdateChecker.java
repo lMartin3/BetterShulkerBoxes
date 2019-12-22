@@ -29,7 +29,7 @@ public class UpdateChecker {
             Bukkit.getServer().getConsoleSender().sendMessage("Error: MalformedURLException, please send this to the developer");
         }
         try {
-            this.changelogURL = new URL("https://raw.githubusercontent.com/lMartin3/BetterShulkerBoxes/master/CHANGELOG.txt" + projectID);
+            this.changelogURL = new URL("https://raw.githubusercontent.com/lMartin3/BetterShulkerBoxes/master/CHANGELOG.txt");
         } catch (MalformedURLException localMalformedURLException) {
             Bukkit.getServer().getConsoleSender().sendMessage("Error: MalformedURLException, please send this to the developer");
         }
@@ -63,6 +63,7 @@ public class UpdateChecker {
             return !this.plugin.getDescription().getVersion().equals(this.newVersion);
         } catch (IOException ioex) {
             plugin.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not check for updates:");
+            plugin.getServer().getConsoleSender().sendMessage(ioex.toString());
             return false;
         }
     }
@@ -85,7 +86,8 @@ public class UpdateChecker {
             bufferedReader.close();
             return changes;
         } catch (IOException ioex) {
-            plugin.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not retrieve the changelog");
+            plugin.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not retrieve the changelog:");
+            plugin.getServer().getConsoleSender().sendMessage(ioex.toString());
             return changes;
         }
     }

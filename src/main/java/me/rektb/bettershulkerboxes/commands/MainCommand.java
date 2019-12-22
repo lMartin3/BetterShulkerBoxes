@@ -43,10 +43,10 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage(cfgi.prefix + ChatColor.AQUA + "Version " + ChatColor.YELLOW +
                             (plugin).lastver + ChatColor.AQUA + " is available! Currently using " + ChatColor.YELLOW +
                             plugin.getDescription().getVersion() + ChatColor.AQUA +
-                            " Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
+                            ". Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
                     sender.sendMessage(cfgi.prefix + ChatColor.AQUA + "Version changes: ");
                     for (String s : plugin.updater.getChangelog()) {
-                        sender.sendMessage(ChatColor.DARK_AQUA + "> " + ChatColor.YELLOW + s);
+                        sender.sendMessage(ChatColor.DARK_AQUA + "> " + ChatColor.GRAY + s);
                     }
                 } else {
                     sender.sendMessage(cfgi.prefix + ChatColor.GREEN + "You're using the latest version of " +

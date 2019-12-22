@@ -9,8 +9,7 @@
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/BetterShulkerBoxes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577044977531</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Small format change">
+      <created>1577045229382</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1577045229382</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -400,7 +406,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Recursion" />
     <MESSAGE value="*Fixed an error where Shulkerboxes would not reproduce a sound when closed.&#10;*Fixed /bsb reload not actually reloading the reload messages" />
     <MESSAGE value="*Changed plugin.yml api version" />
     <MESSAGE value="*Fixed a dupe that worked with players who had +Xms ping" />
@@ -425,7 +430,8 @@
     <MESSAGE value="Changelog and warning&#10;* Added a warning that will be displayed on console when the plugin is used on a server with an unsupported version.&#10;* Starting making the requests to retrieve the changelog from github." />
     <MESSAGE value="Changelog system is now working" />
     <MESSAGE value="Added a warn that will show when the plugin is used on servers running 1.12 or older&#10;Now /bsb check shows a changelog pulled from github" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a warn that will show when the plugin is used on servers running 1.12 or older&#10;Now /bsb check shows a changelog pulled from github" />
+    <MESSAGE value="Small format change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small format change" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -458,10 +464,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1577044977275">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1577045229239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577044977275" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577045229239" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1576988511334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -514,10 +520,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="203" y="0" width="1502" height="1000" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1576948727465" />
-    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1576640679126">
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1577045368318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576640679126" />
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577045368318" />
     <state x="376" y="142" width="1157" height="748" key="new project wizard" timestamp="1576784880782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

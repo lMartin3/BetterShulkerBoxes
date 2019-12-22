@@ -17,7 +17,7 @@ public class PlyrJoinEvent
             e.getPlayer().sendMessage(prefix + ChatColor.AQUA + "Version " + ChatColor.YELLOW +
                     (plugin).lastver + ChatColor.AQUA + " is available! Currently using " + ChatColor.YELLOW +
                     plugin.getDescription().getVersion() + ChatColor.AQUA +
-                    " Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
+                    ". Download the new version at " + ChatColor.YELLOW + (plugin).resourceurl);
         }
     }
 }

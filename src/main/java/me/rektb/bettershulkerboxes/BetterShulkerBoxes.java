@@ -7,6 +7,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
     //instance given to ConfigurationImport
@@ -27,6 +32,24 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public ShulkerManage shlkm;
 
     public void onEnable() {
+        final String regex = "([0-9]{1,2}\\.[0-9]{1,2}(\\.[0-9]{1,2})?)"; //This should get the MC version from "git-Spigot-2ee05fe-d31f05f (MC: 1.15.1)"
+        final Matcher m = Pattern.compile(regex).matcher(getServer().getVersion());
+        final List<String> matches = new ArrayList<>();
+        while (m.find()) {
+            matches.add(m.group(0));
+        }
+        String version = "invalid";
+        if (matches.size() > 0) {
+            version = matches.get(0);
+        }
+        getServer().getConsoleSender().sendMessage(String.valueOf(version.split("\\.")[1]));
+        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[0]) < 13) { // Just a warn when used in versions under 1.13
+            getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
+                    " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
+                    " for players duping items and/or thermonuclear war.", version));
+        }
+        getServer().getConsoleSender().sendMessage(matches.get(0));
+
         loadConfig();
         checkConfigValidity();
 
@@ -59,6 +82,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                 BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "BSB is checking for updates...");
                 try {
                     if (BetterShulkerBoxes.this.updater.checkForUpdates()) {
+                        updater.getChangelog();
                         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Update found! You're using " + getDescription().getVersion() + " New version: " + BetterShulkerBoxes.this.updater.getLatestVersion() + ", download at: " + BetterShulkerBoxes.this.updater.getResourceURL());
                         BetterShulkerBoxes.this.updatefound = true;
                         BetterShulkerBoxes.this.lastver = BetterShulkerBoxes.this.updater.getLatestVersion();

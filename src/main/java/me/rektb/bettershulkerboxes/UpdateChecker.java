@@ -10,10 +10,12 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 public class UpdateChecker {
     private int project;
     private URL checkURL;
+    private URL changelogURL;
     private String newVersion;
     private JavaPlugin plugin;
 
@@ -26,6 +28,12 @@ public class UpdateChecker {
         } catch (MalformedURLException localMalformedURLException) {
             Bukkit.getServer().getConsoleSender().sendMessage("Error: MalformedURLException, please send this to the developer");
         }
+        try {
+            this.changelogURL = new URL("https://raw.githubusercontent.com/lMartin3/BetterShulkerBoxes/master/CHANGELOG.txt" + projectID);
+        } catch (MalformedURLException localMalformedURLException) {
+            Bukkit.getServer().getConsoleSender().sendMessage("Error: MalformedURLException, please send this to the developer");
+        }
+
     }
 
     public int getProjectID() {
@@ -59,5 +67,27 @@ public class UpdateChecker {
         }
     }
 
+    public String[] getChangelog() {
+        String[] changes = {};
+        try {
+            URLConnection con = this.changelogURL.openConnection();
+            InputStreamReader inSR = new InputStreamReader(con.getInputStream());
+            BufferedReader bufferedReader = new BufferedReader(inSR);
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+            ArrayList<String> lines = new ArrayList<>();
+            while ((inputLine = bufferedReader.readLine()) != null) {
+                lines.add(inputLine);
+            }
+            for (String line : lines) {
+                plugin.getServer().getConsoleSender().sendMessage(line);
+            }
+            bufferedReader.close();
+            return changes;
+        } catch (IOException ioex) {
+            plugin.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Error! BSB could not retrieve the changelog");
+            return changes;
+        }
+    }
 
 }

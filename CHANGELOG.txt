@@ -1,2 +1,1 @@
-Added a warning that will be shown when the plugin is used in versions older than 1.13
-Now /bsb check shows a changelog
+Now players go back to their inventories after opening a shulkerbox by right-clicking it in the inventory.

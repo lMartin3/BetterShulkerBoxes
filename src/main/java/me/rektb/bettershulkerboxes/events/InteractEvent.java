@@ -145,11 +145,16 @@ public class InteractEvent implements Listener {
         cooldownlist.add(p.getName());
         removeCooldownLater(p);
 
+
         //TODO fix this with regular shulker boxes
         if (p.getOpenInventory().getInventory(1) != null && is_performing_switch) {
             //Close inventory without performing unswap
             shlkm.swap.remove(p.getName());
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
+            if (e.getClick().equals(ClickType.RIGHT) && e.getSlot() == p.getInventory().getHeldItemSlot()) {
+                p.closeInventory();
+                return;
+            }
         }
         shlkm.shulkerSwap(p, e.getSlot());
         shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());

@@ -82,6 +82,7 @@ public class DupePreventEvents implements Listener {
         if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
             return;
         }
+
         e.setCancelled(true);
     }
 

@@ -151,11 +151,7 @@ public class InteractEvent implements Listener {
             //Close inventory without performing unswap
             shlkm.swap.remove(p.getName());
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
-            if (e.getClick().equals(ClickType.RIGHT) && e.getSlot() == p.getInventory().getHeldItemSlot()) {
-                p.closeInventory();
-                p.openInventory(p.getInventory());
-                return;
-            }
+
         }
         shlkm.shulkerSwap(p, e.getSlot());
         shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());

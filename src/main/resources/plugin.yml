@@ -1,8 +1,8 @@
 name: BetterShulkerBoxes
 author: Rektb
-version: 2.9.0
+version: 2.8.0
 description: Open your shulkerboxes easier!
-main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
+main: me.rektb.bettershulkerboxes.BetterShulkerBoxeswwwwwww
 api-version: 1.13
 commands:
   bsb:

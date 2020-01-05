@@ -6,18 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="Fixed a">
+    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/DupePreventEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/DupePreventEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InvCloseEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InvCloseEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -448,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578009942618</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fixed a critical dupe bug&#10;Commented the code a bit">
+      <created>1578258845694</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1578258845695</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -456,7 +459,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="I should learn how to use git properly" />
     <MESSAGE value="Changed .gitignore" />
     <MESSAGE value="Remade the shulkerbox switching mechanism and fixed some bugs. Shulkerboxes now swap successfully, except for those without a custom display name, for some reason." />
     <MESSAGE value="Licensing &amp; debug&#10;Added LICENSE.txt and updated README.md for licensing purposes.&#10;Added and removed debug messages." />
@@ -481,7 +483,8 @@
     <MESSAGE value="Correction: Now players go back to their inventories after opening a shulkerbox by right-clicking it in the inventory." />
     <MESSAGE value="Version correction" />
     <MESSAGE value="Reverted changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverted changes" />
+    <MESSAGE value="Fixed a critical dupe bug&#10;Commented the code a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a critical dupe bug&#10;Commented the code a bit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -514,10 +517,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1578258241556">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1578258845330">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578258241556" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578258845330" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1578254670892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -554,10 +557,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" width="1024" height="840" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576782677277" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578009952312">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578258857443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578009952312" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578258857443" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1578254653035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -570,10 +573,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="203" y="0" width="1502" height="1000" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1576948727465" />
-    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1578257298070">
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1578259179612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578257298070" />
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578259179612" />
     <state x="376" y="142" width="1157" height="748" key="new project wizard" timestamp="1577716578086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

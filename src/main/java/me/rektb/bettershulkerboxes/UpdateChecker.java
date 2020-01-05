@@ -56,6 +56,7 @@ public class UpdateChecker {
         return this.plugin.getDescription().getVersion();
     }
 
+    //GET request to a spigot api
     public boolean checkForUpdates() {
         try {
             URLConnection con = this.checkURL.openConnection();
@@ -68,6 +69,7 @@ public class UpdateChecker {
         }
     }
 
+    //GET request to a (raw) file on the github repo
     public ArrayList<String> getChangelog() {
         ArrayList<String> lines = new ArrayList<>();
         try {

@@ -6,12 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
+    <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="Fixed a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ShulkerManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/UpdateChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/commands/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/DupePreventEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InvCloseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/PlyrJoinEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +70,7 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="bsb" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569090946909" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../infobar" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -435,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577990115721</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Reverted changes">
+      <created>1578009942618</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1578009942618</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -443,7 +456,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Reverted merge in main branch" />
     <MESSAGE value="I should learn how to use git properly" />
     <MESSAGE value="Changed .gitignore" />
     <MESSAGE value="Remade the shulkerbox switching mechanism and fixed some bugs. Shulkerboxes now swap successfully, except for those without a custom display name, for some reason." />
@@ -468,7 +480,8 @@
     <MESSAGE value="Adding a new feature to close the shulkerbox the player is currently holding by right-clicking it in the inventory." />
     <MESSAGE value="Correction: Now players go back to their inventories after opening a shulkerbox by right-clicking it in the inventory." />
     <MESSAGE value="Version correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version correction" />
+    <MESSAGE value="Reverted changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reverted changes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -501,14 +514,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1578009928437">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1578258241556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578009928437" />
-    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1577746873209">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578258241556" />
+    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1578254670892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577746873209" />
+    <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1578254670892" />
     <state width="1878" height="276" key="GridCell.Tab.0.bottom" timestamp="1576298091334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -541,14 +554,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" width="1024" height="840" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576782677277" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1577990121777">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1578009952312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577990121777" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1577989710994">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578009952312" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1578254653035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577989710994" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578254653035" />
     <state x="757" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576988667772">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -557,10 +570,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="203" y="0" width="1502" height="1000" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1576948727465" />
-    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1577045368318">
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1578257298070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577045368318" />
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578257298070" />
     <state x="376" y="142" width="1157" height="748" key="new project wizard" timestamp="1577716578086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

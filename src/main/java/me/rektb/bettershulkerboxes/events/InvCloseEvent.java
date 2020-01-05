@@ -18,6 +18,15 @@ public class InvCloseEvent implements Listener {
     @EventHandler
     public void onInvClose(InventoryCloseEvent e) {
         Player p = (Player) e.getPlayer();
+
+        // This prevents duping when a player closes a (block) shulker box while holding one with the same
+        // color and name.
+        if (e.getInventory().getHolder() != null) {
+            if (!e.getInventory().getHolder().equals(p)) {
+                return;
+            }
+        }
+
         String nowinvname = e.getView().getTitle();
         if (shlkm.isHoldingShulker(p.getInventory().getItemInMainHand())) {
             Material holdingshulker = e.getPlayer().getInventory().getItemInMainHand().getType();
@@ -53,6 +62,7 @@ public class InvCloseEvent implements Listener {
         }
     }
 
+    // This updates the instances so the bsb reload command works.
     public void getNewInstances() {
         this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
         this.cfgi = plugin.cfgi;

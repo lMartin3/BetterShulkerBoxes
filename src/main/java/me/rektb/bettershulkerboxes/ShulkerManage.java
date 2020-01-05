@@ -73,9 +73,9 @@ public class ShulkerManage {
 
         Inventory inv;
         if (invname.equals("") || invname.equals(" ")) {
-            inv = Bukkit.createInventory(null, InventoryType.SHULKER_BOX, InventoryType.SHULKER_BOX.getDefaultTitle());
+            inv = Bukkit.createInventory(p, InventoryType.SHULKER_BOX, InventoryType.SHULKER_BOX.getDefaultTitle());
         } else {
-            inv = Bukkit.createInventory(null, InventoryType.SHULKER_BOX, invname);
+            inv = Bukkit.createInventory(p, InventoryType.SHULKER_BOX, invname);
         }
 
         inv.setContents(shulker.getInventory().getContents());

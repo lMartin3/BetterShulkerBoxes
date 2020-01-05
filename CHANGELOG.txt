@@ -1,2 +1,1 @@
-Added a warning that will be shown when the plugin is used in versions older than 1.13
-Now /bsb check shows a changelog
+Fixed a dupe bug that occurs when players close a (block) shulker box. More details on GitHub/Spigot forums.

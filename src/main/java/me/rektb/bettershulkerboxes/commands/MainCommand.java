@@ -39,6 +39,7 @@ public class MainCommand implements CommandExecutor {
                     sender.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
                     return false;
                 }
+                // This does not run on a separate thread but it is meant to be used by admins only.
                 if (plugin.updater.checkForUpdates()) {
                     sender.sendMessage(cfgi.prefix + ChatColor.AQUA + "Version " + ChatColor.YELLOW +
                             (plugin).lastver + ChatColor.AQUA + " is available! Currently using " + ChatColor.YELLOW +
@@ -53,12 +54,14 @@ public class MainCommand implements CommandExecutor {
                             "BetterShulkerBoxes (" + ChatColor.YELLOW + plugin.getDescription().getVersion() + ChatColor.GREEN + ")");
                 }
 
+            } else {
+                pluginInfo(sender);
             }
         }
         return false;
     }
 
-
+    // This is sent when there are no arguments or an invalid one
     private void pluginInfo(CommandSender s) {
         s.sendMessage(cfgi.prefix + ChatColor.AQUA + "This server is running " + ChatColor.YELLOW + "Better Shulker Boxes v" + plugin.getDescription().getVersion() + ChatColor.AQUA + ".");
         if (s.hasPermission("bettershulkerboxes.reload")) {
@@ -69,7 +72,7 @@ public class MainCommand implements CommandExecutor {
         }
     }
 
-
+    // Does the same as in other classes
     public void getNewInstances() {
         this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
         this.cfgi = plugin.cfgi;

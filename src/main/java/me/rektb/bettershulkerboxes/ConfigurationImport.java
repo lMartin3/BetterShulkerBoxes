@@ -3,6 +3,8 @@ package me.rektb.bettershulkerboxes;
 import org.bukkit.ChatColor;
 
 public class ConfigurationImport {
+    // this is not spaghetti, it's lasagna!
+
     BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     String errors = "";
     String checkfor = "prefix inventory_name open_msg close_msg no_permission_msg cooldown_msg config_reload_msg config_reload_error_msg";
@@ -43,6 +45,7 @@ public class ConfigurationImport {
     public final boolean cfg_closemsg_enabled = getEnabled("close_msg");
     public final boolean cfg_nopermsmsg_enabled = getEnabled("no_permission_msg");
     public final boolean cfg_cooldoenmsg_enabled = getEnabled("cooldown_msg");
+
 
     public String checkConfigurationValidity() {
         String[] cfl = checkfor.split(" ");

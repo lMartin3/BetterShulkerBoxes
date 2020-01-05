@@ -18,6 +18,9 @@ public class DupePreventEvents implements Listener {
     private ConfigurationImport cfgi = plugin.cfgi;
     private ShulkerManage shlkm = plugin.shlkm;
 
+    // This class prevents some dupes that could occur
+
+    // Player opens shulkerbox -> grabs items -> swaps it with another slot in the hotbar with numkeys -> closes inv -> contents not saved -> dupe
     @EventHandler
     public void swapDupe(InventoryClickEvent e) {
         if (!e.getClick().equals(ClickType.NUMBER_KEY)) {
@@ -42,6 +45,7 @@ public class DupePreventEvents implements Listener {
         e.setCancelled(true);
     }
 
+    // Player opens shulkerbox -> grabs items -> drops it -> contents were not saved -> dupe
     @EventHandler
     public void dropDupe(PlayerDropItemEvent e) {
         Player p = e.getPlayer();
@@ -51,6 +55,7 @@ public class DupePreventEvents implements Listener {
         }
     }
 
+    // Player opens shulkerbox -> withdraws items from it -> commits suicide -> invCloseEvent was not called and content's didn't save -> dupe
     @EventHandler
     public void deathDupe(EntityDamageEvent e) {
         if (!(e.getEntity() instanceof Player)) {
@@ -86,6 +91,7 @@ public class DupePreventEvents implements Listener {
         e.setCancelled(true);
     }
 
+    // yes
     public void getNewInstances() {
         this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
         this.cfgi = plugin.cfgi;

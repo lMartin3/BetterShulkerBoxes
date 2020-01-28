@@ -89,6 +89,9 @@ public class InteractEvent implements Listener {
         if (!e.getClick().equals(ClickType.RIGHT)) {
             return;
         }
+        if (e.getClickedInventory() == null) {
+            return;
+        }
 
         boolean is_inventory_shulker = false;
         boolean is_performing_switch = false;
@@ -103,27 +106,37 @@ public class InteractEvent implements Listener {
         if (e.getCurrentItem() != null && is_inventory_shulker && shlkm.isHoldingShulker(e.getCurrentItem())) {
             is_performing_switch = true;
         }
-        InventoryType type = p.getOpenInventory().getType();
-        if (!(type.equals(InventoryType.CRAFTING) || is_inventory_shulker || type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST))) {
+        InventoryType type = e.getClickedInventory().getType();
+        if (!(type.equals(InventoryType.PLAYER) || type.equals(InventoryType.CRAFTING) || is_inventory_shulker || type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST))) {
+            p.sendMessage(type.toString());
             return;
         }
         if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
             return;
         }
 
-
+        int e_slot = e.getSlot();
         //from here, player is 100% trying to open the shulker box;
         if (type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST)) {
-            p.sendMessage("triggered");
-            if (e.isCancelled()) {
-                p.sendMessage("No chest permission");
+            if (!cfgi.cfg_rightclick_chest_enabled) {
                 return;
             }
             ItemStack it = e.getCurrentItem();
+            ArrayList<Integer> free_slots = new ArrayList<>();
+            for (int i = 0; i < 35; i++) {
+                if (p.getInventory().getItem(i) == null) {
+                    free_slots.add(i);
+                }
+            }
+            if (free_slots.size() == 0) {
+                e.setCancelled(true);
+                return;
+            }
             e.getInventory().remove(it);
+            p.getInventory().setItem(free_slots.get(0), it);
+            e_slot = free_slots.get(0);
+            //TODO
 
-            p.getInventory().addItem(it);
-            return;
         }
         e.setCancelled(true);
 
@@ -140,7 +153,7 @@ public class InteractEvent implements Listener {
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
 
         }
-        shlkm.shulkerSwap(p, e.getSlot());
+        shlkm.shulkerSwap(p, e_slot);
         shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
     }
 

@@ -8,10 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/ConfigurationImport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -463,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579472277882</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Small changes and helper functions">
+      <created>1580215758011</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1580215758011</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -471,7 +478,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Licensing &amp; debug&#10;Added LICENSE.txt and updated README.md for licensing purposes.&#10;Added and removed debug messages." />
     <MESSAGE value="Shulker swapping.&#10;Minor bugs fixed.&#10;Still having problems with non renamed shulkerboxes." />
     <MESSAGE value="Grammar corrections, just to test discord webhook really" />
     <MESSAGE value="It works now.&#10;It probably works now.&#10;It may work now.&#10;It should work now." />
@@ -496,7 +502,8 @@
     <MESSAGE value="Fixed a critical dupe bug&#10;Commented the code a bit" />
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Will this work?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Will this work?" />
+    <MESSAGE value="Small changes and helper functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes and helper functions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -529,10 +536,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1580215736088">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1580215757813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580215736088" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580215757813" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1579528117553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -569,10 +576,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" width="1024" height="840" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576782677277" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1580215737898">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1580215761420">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580215737898" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580215761420" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1578254653035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

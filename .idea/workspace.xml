@@ -8,7 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d3505c5e-9aeb-4754-a045-0cf0fe951ce1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rektb/bettershulkerboxes/events/InteractEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/rektb/bettershulkerboxes/events/InteractEvent.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,13 +132,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555546349302</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Uploaded source code">
-      <created>1563332705759</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1563332705759</updated>
     </task>
     <task id="LOCAL-00002" summary="Uploaded source code">
       <created>1563333841177</created>
@@ -474,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580241277434</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Final details + code reformat">
+      <created>1580241457127</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1580241457127</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -482,7 +484,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Grammar corrections, just to test discord webhook really" />
     <MESSAGE value="It works now.&#10;It probably works now.&#10;It may work now.&#10;It should work now." />
     <MESSAGE value="Minor changes&#10;- Removed a debug message&#10;- Updated version parameter on plugin.yml" />
     <MESSAGE value="Added 'check' subcommand to check for updates." />
@@ -507,7 +508,8 @@
     <MESSAGE value="Will this work?" />
     <MESSAGE value="Small changes and helper functions" />
     <MESSAGE value="Final details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final details" />
+    <MESSAGE value="Final details + code reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final details + code reformat" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -540,10 +542,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="250" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576701520243" />
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1580241276284">
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2" timestamp="1580241456961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580241276284" />
+    <state x="563" y="117" width="784" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580241456961" />
     <state x="743" y="263" width="424" height="506" key="FileChooserDialogImpl" timestamp="1579528117553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -580,10 +582,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="464" y="155" width="1024" height="840" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576782677277" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1580215761420">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1580241520443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580215761420" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580241520443" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1578254653035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -596,10 +598,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="203" y="0" width="1502" height="1000" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1576948727465" />
-    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1578259179612">
+    <state x="636" y="130" width="647" height="777" key="find.popup" timestamp="1580241623733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578259179612" />
+    <state x="636" y="130" width="647" height="777" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580241623733" />
     <state x="376" y="142" width="1157" height="748" key="new project wizard" timestamp="1577716578086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

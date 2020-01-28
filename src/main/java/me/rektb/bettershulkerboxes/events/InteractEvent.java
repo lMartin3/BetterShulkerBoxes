@@ -97,14 +97,14 @@ public class InteractEvent implements Listener {
                 is_inventory_shulker = true;
             }
         }
+        if (e.getCurrentItem() == null) {
+            return;
+        }
         if (e.getCurrentItem() != null && is_inventory_shulker && shlkm.isHoldingShulker(e.getCurrentItem())) {
             is_performing_switch = true;
         }
         InventoryType type = p.getOpenInventory().getType();
         if (!(type.equals(InventoryType.CRAFTING) || is_inventory_shulker || type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST))) {
-            return;
-        }
-        if (e.getCurrentItem() == null) {
             return;
         }
         if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
@@ -113,40 +113,27 @@ public class InteractEvent implements Listener {
 
 
         //from here, player is 100% trying to open the shulker box;
+        if (type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST)) {
+            p.sendMessage("triggered");
+            if (e.isCancelled()) {
+                p.sendMessage("No chest permission");
+                return;
+            }
+            ItemStack it = e.getCurrentItem();
+            e.getInventory().remove(it);
+
+            p.getInventory().addItem(it);
+            return;
+        }
         e.setCancelled(true);
 
-        //TODO helper function for this
-        if (!cfgi.cfg_rightclick_enabled) {
-            return;
-        }
-
-        if (cfgi.cfg_rightclick_requiresperms && !p.hasPermission("bettershulkerboxes.use.rightclick")) {
-            if (cfgi.cfg_nopermsmsg_enabled) {
-                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
-            }
-            return;
-        }
-
-        if (cfgi.cfg_requiresperms && !p.hasPermission("bettershulkerboxes.use")) {
-            if (cfgi.cfg_nopermsmsg_enabled) {
-                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
-            }
-            return;
-        }
-
-        if ((cfgi.cfg_enablecooldown) &&
-                (this.cooldownlist.contains(p.getName())) &&
-                (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
-            if (cfgi.cfg_cooldoenmsg_enabled) {
-                p.sendMessage(cfgi.prefix + cfgi.cooldownmsg);
-            }
+        if (!canOpen(p)) {
             return;
         }
         cooldownlist.add(p.getName());
         removeCooldownLater(p);
 
 
-        //TODO fix this with regular shulker boxes
         if (p.getOpenInventory().getInventory(1) != null && is_performing_switch) {
             //Close inventory without performing unswap
             shlkm.swap.remove(p.getName());
@@ -170,5 +157,36 @@ public class InteractEvent implements Listener {
     public void getNewInstances() {
         this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
         this.cfgi = plugin.cfgi;
+    }
+
+    public boolean canOpen(Player p) {
+        //TODO helper function for this
+        if (!cfgi.cfg_rightclick_enabled) {
+            return false;
+        }
+
+        if (cfgi.cfg_rightclick_requiresperms && !p.hasPermission("bettershulkerboxes.use.rightclick")) {
+            if (cfgi.cfg_nopermsmsg_enabled) {
+                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
+            }
+            return false;
+        }
+
+        if (cfgi.cfg_requiresperms && !p.hasPermission("bettershulkerboxes.use")) {
+            if (cfgi.cfg_nopermsmsg_enabled) {
+                p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
+            }
+            return false;
+        }
+
+        if ((cfgi.cfg_enablecooldown) &&
+                (this.cooldownlist.contains(p.getName())) &&
+                (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
+            if (cfgi.cfg_cooldoenmsg_enabled) {
+                p.sendMessage(cfgi.prefix + cfgi.cooldownmsg);
+            }
+            return false;
+        }
+        return true;
     }
 }

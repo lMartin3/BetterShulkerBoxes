@@ -29,7 +29,7 @@ enable_read_only: false # [Boolean] Enable 'read-only' mode, allowing players to
 enable_rclick_air_open: true # [Boolean] Enable the original feature to open shulkerboxes by rightclicking into the air while holding them? (Recommended)
 enable_rightclick_open: true # [Boolean] Enable the 2.0 feature to open shulkerboxes by rightclicking them inside the inventory? (Recommended)
 rightclick_requires_permission: false #[Boolean] Right-click feature requires permissions? (Not recommended)
-enable_rclick_chest_open: trie #[Boolean] Enable right-click in chest to open shulkerbox? WARNING: Can cause conflicts with LWC Donation chests!
+enable_rclick_chest_open: true #[Boolean] Enable right-click in chest to open shulkerbox? WARNING: Can cause conflicts with LWC Donation chests!
 
 # Since 2.7.0 Better Shulker Boxes automatically recollects server information. This is with the only purpose of helping development.
 # The data sent is completely anonymous, and it does not include compromising information.

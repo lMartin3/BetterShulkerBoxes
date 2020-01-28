@@ -1,9 +1,2 @@
+BSB.iml
 .idea
-*.jar
-*.war
-*.zip
-*.tar.gz
-*.rar
-*.iml
-./target
-./.idea

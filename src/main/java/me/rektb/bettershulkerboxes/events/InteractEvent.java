@@ -109,7 +109,6 @@ public class InteractEvent implements Listener {
         }
         InventoryType type = e.getClickedInventory().getType();
         if (!(type.equals(InventoryType.PLAYER) || type.equals(InventoryType.CRAFTING) || is_inventory_shulker || type.equals(InventoryType.CHEST) || type.equals(InventoryType.ENDER_CHEST))) {
-            p.sendMessage(type.toString());
             return;
         }
         if (!shlkm.isHoldingShulker(e.getCurrentItem())) {

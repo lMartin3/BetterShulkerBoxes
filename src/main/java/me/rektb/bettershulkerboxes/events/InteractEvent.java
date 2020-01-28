@@ -23,13 +23,12 @@ public class InteractEvent implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     private ConfigurationImport cfgi = plugin.cfgi;
     private ShulkerManage shlkm = plugin.shlkm;
-    ArrayList<String> cooldownlist = new ArrayList();
-    private int finalcooldown = cfgi.cfg_cooldown * 20;
+    ArrayList<String> cooldownlist = new ArrayList<>();
 
     @EventHandler
     public void onInteract(PlayerInteractEvent e) {
         Player p = e.getPlayer();
-        if (p.getInventory().getItemInMainHand().equals(Material.AIR)) {
+        if (p.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
             return;
         }
         if (!e.getAction().equals(Action.RIGHT_CLICK_AIR)) {
@@ -40,14 +39,16 @@ public class InteractEvent implements Listener {
             return;
         }
         ItemStack eitem = e.getItem();
-        if (!(holding.getItemMeta() instanceof BlockStateMeta)) {
+        if (!(holding.getItemMeta() instanceof BlockStateMeta) || !holding.hasItemMeta()) {
             return;
         }
+        assert eitem != null;
         BlockStateMeta im = (BlockStateMeta) eitem.getItemMeta();
+        assert im != null;
         if (!(im.getBlockState() instanceof ShulkerBox)) {
             return;
         }
-        ShulkerBox shulker = (ShulkerBox) im.getBlockState();
+        //ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         if ((e.getAction().equals(Action.RIGHT_CLICK_AIR)) && shlkm.isHoldingShulker(e.getItem())) {
             if (!cfgi.cfg_rclickair) {
                 return;
@@ -71,7 +72,7 @@ public class InteractEvent implements Listener {
             }
             cooldownlist.add(p.getName());
             removeCooldownLater(p);
-            String getitemname = holding.getItemMeta().getDisplayName();
+            //String getitemname = holding.getItemMeta().getDisplayName();
             int slot = p.getInventory().getHeldItemSlot();
             plugin.shlkm.openShulker(p, holding, slot);
         }
@@ -139,7 +140,6 @@ public class InteractEvent implements Listener {
 
         }
         e.setCancelled(true);
-
         if (!canOpen(p)) {
             return;
         }
@@ -159,12 +159,7 @@ public class InteractEvent implements Listener {
 
 
     public void removeCooldownLater(Player p) {
-        Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
-            @Override
-            public void run() {
-                cooldownlist.remove(p.getName());
-            }
-        }, (cfgi.cfg_cooldown / 1000) * 20);
+        Bukkit.getScheduler().runTaskLater(plugin, () -> cooldownlist.remove(p.getName()), (cfgi.cfg_cooldown / 1000) * 20);
     }
 
     public void getNewInstances() {

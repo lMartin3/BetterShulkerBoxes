@@ -1,1 +1,1 @@
-Fixed a dupe bug that occurs when players close a (block) shulker box. More details on GitHub/Spigot forums.
+Added the feature to open Shulker Boxes from inside chests and ender chests.

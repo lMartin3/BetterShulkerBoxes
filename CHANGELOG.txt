@@ -1,1 +1,1 @@
-Added the feature to open Shulker Boxes from inside chests and ender chests.
+Fixed a bug where opening shulker boxes from an enderchest would cause other shulker boxes with the same name and color in the container's inventory to dissapear.

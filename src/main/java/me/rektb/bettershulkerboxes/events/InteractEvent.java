@@ -132,7 +132,16 @@ public class InteractEvent implements Listener {
                 e.setCancelled(true);
                 return;
             }
-            e.getInventory().remove(it);
+            //e.getInventory().remove(it);
+            int sel_slot = -1;
+            for (int i = 0; i < e.getInventory().getSize() - 1; i++) {
+                ItemStack slot_stack = e.getInventory().getItem(i);
+                if (slot_stack != null && slot_stack.equals(it)) {
+                    sel_slot = i;
+                    break;
+                }
+            }
+            e.getInventory().setItem(sel_slot, new ItemStack(Material.AIR));
             p.getInventory().setItem(free_slots.get(0), it);
             e_slot = free_slots.get(0);
             //TODO

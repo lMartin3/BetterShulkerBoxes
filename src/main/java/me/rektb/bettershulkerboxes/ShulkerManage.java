@@ -26,13 +26,17 @@ public class ShulkerManage {
 
     //Close shulkerbox
     public void closeShulker(Player p, ItemStack shulkerStack, Inventory shulkerInventory) {
+        //if(shulkerStack.getItemMeta()==null) {return; }
         String getitemname = shulkerStack.getItemMeta().getDisplayName();
+        if (getitemname == null) {
+            getitemname = "";
+        }
         ItemStack itemStack = new ItemStack(shulkerStack);
 
         BlockStateMeta bsm = (BlockStateMeta) itemStack.getItemMeta();
         ShulkerBox box = (ShulkerBox) bsm.getBlockState();
         box.getInventory().setContents(shulkerInventory.getContents());
-        if (getitemname != " ") {
+        if (!getitemname.equals(" ") && !getitemname.equals("")) {
             bsm.setDisplayName(getitemname);
         }
         bsm.setBlockState(box);
@@ -64,12 +68,15 @@ public class ShulkerManage {
         if (shulkerStack.hasItemMeta() && shulkerStack.getItemMeta().hasDisplayName()) {
             invname = shulkerStack.getItemMeta().getDisplayName();
         }
-
+        String in = im.getDisplayName();
+        if (in == null) {
+            in = "placeholder";
+        }
         if (cfgi.cfg_openmsg_enabled) {
-            p.sendMessage(cfgi.prefix + cfgi.openmsg.replace("%itemname%", im.getDisplayName()));
+            p.sendMessage(cfgi.prefix + cfgi.openmsg.replace("%itemname%", in));
         }
 
-        invname = cfgi.invname.replace("%itemname%", im.getDisplayName());
+        invname = cfgi.invname.replace("%itemname%", invname);
 
         Inventory inv;
         if (invname.equals("") || invname.equals(" ")) {
@@ -116,7 +123,9 @@ public class ShulkerManage {
     public boolean isInventoryShulker(ItemStack shulker, String inventoryname) {
         String checkname = cfgi.invname;
         String holdingitemname = "";
-        if (shulker.getItemMeta() != null && !shulker.getItemMeta().getDisplayName().isEmpty()) {
+        if (shulker.getItemMeta() != null &&
+                shulker.getItemMeta().getDisplayName() != null &&
+                !shulker.getItemMeta().getDisplayName().isEmpty()) {
             holdingitemname = shulker.getItemMeta().getDisplayName();
         }
         checkname = checkname.replace("%itemname%", holdingitemname);

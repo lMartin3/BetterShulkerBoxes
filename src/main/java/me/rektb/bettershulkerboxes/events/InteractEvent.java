@@ -39,7 +39,7 @@ public class InteractEvent implements Listener {
             return;
         }
         ItemStack eitem = e.getItem();
-        if (!(holding.getItemMeta() instanceof BlockStateMeta) || !holding.hasItemMeta()) {
+        if (!(holding.getItemMeta() instanceof BlockStateMeta)) {
             return;
         }
         assert eitem != null;

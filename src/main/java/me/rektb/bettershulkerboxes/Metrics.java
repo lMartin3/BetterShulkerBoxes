@@ -65,7 +65,7 @@ public class Metrics {
     private static String serverUUID;
 
     // The plugin
-    private final Plugin plugin;
+    private final BetterShulkerBoxes plugin;
 
     // A list with all custom charts
     private final List<CustomChart> charts = new ArrayList<>();
@@ -75,7 +75,7 @@ public class Metrics {
      *
      * @param plugin The plugin which stats should be submitted.
      */
-    public Metrics(Plugin plugin) {
+    public Metrics(BetterShulkerBoxes plugin) {
         if (plugin == null) {
             throw new IllegalArgumentException("Plugin cannot be null!");
         }
@@ -254,6 +254,12 @@ public class Metrics {
         data.addProperty("osArch", osArch);
         data.addProperty("osVersion", osVersion);
         data.addProperty("coreCount", coreCount);
+
+        data.addProperty("enablesCooldown", plugin.cfgi.cfg_enablecooldown);
+        data.addProperty("enablesReadOnly", plugin.cfgi.cfg_read_only);
+        data.addProperty("enablesRightClickAir", plugin.cfgi.cfg_rclickair);
+        data.addProperty("enablesRightClickInventory", plugin.cfgi.cfg_rightclick_enabled);
+        data.addProperty("enablesRightClickContainer", plugin.cfgi.cfg_rightclick_chest_enabled);
 
         return data;
     }

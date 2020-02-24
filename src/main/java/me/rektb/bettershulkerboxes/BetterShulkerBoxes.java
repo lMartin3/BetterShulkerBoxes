@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,7 +71,33 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(plyrJoinEvent, this);
 
         if (cfgi.cfg_statistics) {
-            Metrics metrics = new Metrics(this);
+            Metrics metrics = new Metrics(this, 6076);
+            metrics.addCustomChart(new Metrics.SimplePie("cooldown_enabled", new Callable<String>() {
+                @Override
+                public String call() throws Exception {
+                    return String.valueOf(cfgi.cfg_enablecooldown);
+                }
+            }));
+            metrics.addCustomChart(new Metrics.SimplePie("right_click_air_enabled", new Callable<String>() {
+                @Override
+                public String call() throws Exception {
+                    return String.valueOf(cfgi.cfg_rclickair);
+                }
+            }));
+            metrics.addCustomChart(new Metrics.SimplePie("right_click_inventory_enabled", new Callable<String>() {
+                @Override
+                public String call() throws Exception {
+                    return String.valueOf(cfgi.cfg_rightclick_enabled);
+                }
+            }));
+            metrics.addCustomChart(new Metrics.SimplePie("right_click_container_enabled", new Callable<String>() {
+                @Override
+                public String call() throws Exception {
+                    return String.valueOf(cfgi.cfg_rightclick_chest_enabled);
+                }
+            }));
+
+
         } else {
             getServer().getConsoleSender().sendMessage("Statistics have been disabled, please consider enabling them to" +
                     "help plugin development.");

@@ -77,7 +77,7 @@ public class UpdateChecker {
             InputStreamReader inSR = new InputStreamReader(con.getInputStream());
             BufferedReader bufferedReader = new BufferedReader(inSR);
             String inputLine;
-            StringBuffer content = new StringBuffer();
+            //StringBuffer content = new StringBuffer();
             while ((inputLine = bufferedReader.readLine()) != null) {
                 lines.add(inputLine);
             }

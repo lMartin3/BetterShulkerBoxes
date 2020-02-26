@@ -11,12 +11,10 @@ import org.bukkit.event.inventory.InventoryType;
 
 public class InvClickEvent implements Listener {
 
-    private BetterShulkerBoxes plugin;
     private ConfigurationImport cfgi;
     private ShulkerManage shlkm;
 
     public InvClickEvent(BetterShulkerBoxes plugin) {
-        this.plugin = plugin;
         this.cfgi = plugin.cfgi;
         this.shlkm = plugin.shlkm;
     }

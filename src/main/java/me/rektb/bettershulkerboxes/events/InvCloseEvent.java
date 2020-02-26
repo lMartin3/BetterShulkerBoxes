@@ -13,23 +13,21 @@ import org.bukkit.inventory.ItemStack;
 
 public class InvCloseEvent implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
-    ConfigurationImport cfgi = plugin.cfgi;
-    ShulkerManage shlkm = plugin.shlkm;
+    private ConfigurationImport cfgi = plugin.cfgi;
+    private ShulkerManage shlkm = plugin.shlkm;
+
     @EventHandler
     public void onInvClose(InventoryCloseEvent e) {
         Player p = (Player) e.getPlayer();
 
         // This prevents duping when a player closes a (block) shulker box while holding one with the same
         // color and name.
-        if (e.getInventory().getHolder() != null) {
-            if (!e.getInventory().getHolder().equals(p)) {
-                return;
-            }
+        if (e.getInventory().getHolder() != null && !e.getInventory().getHolder().equals(p)) {
+            return;
         }
 
         String nowinvname = e.getView().getTitle();
         if (shlkm.isHoldingShulker(p.getInventory().getItemInMainHand())) {
-            Material holdingshulker = e.getPlayer().getInventory().getItemInMainHand().getType();
             String holdingitemname = "";
             ItemStack iteminmainhand = e.getPlayer().getInventory().getItemInMainHand();
             if (iteminmainhand.getItemMeta() != null && iteminmainhand.getItemMeta().hasDisplayName()) {

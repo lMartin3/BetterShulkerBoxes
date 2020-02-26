@@ -25,46 +25,49 @@ public class InteractEvent implements Listener {
     private ShulkerManage shlkm = plugin.shlkm;
     ArrayList<String> cooldownlist = new ArrayList<>();
 
-    @EventHandler
-    public void onInteract(PlayerInteractEvent e) {
+    public boolean doChecks(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         if (p.getInventory().getItemInMainHand().getType().equals(Material.AIR)) {
-            return;
+            return false;
         }
         if (!e.getAction().equals(Action.RIGHT_CLICK_AIR)) {
-            return;
+            return false;
         }
         ItemStack holding = p.getInventory().getItemInMainHand();
         if (p.getInventory().getItemInOffHand().equals(e.getItem())) {
-            return;
+            return false;
         }
         ItemStack eitem = e.getItem();
         if (!(holding.getItemMeta() instanceof BlockStateMeta)) {
-            return;
+            return false;
         }
         assert eitem != null;
         BlockStateMeta im = (BlockStateMeta) eitem.getItemMeta();
         assert im != null;
-        if (!(im.getBlockState() instanceof ShulkerBox)) {
+        return im.getBlockState() instanceof ShulkerBox;
+    }
+
+
+    @EventHandler
+    public void onInteract(PlayerInteractEvent e) {
+        Player p = e.getPlayer();
+        if (!doChecks(e)) {
             return;
         }
+        ItemStack holding = p.getInventory().getItemInMainHand();
         //ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         if ((e.getAction().equals(Action.RIGHT_CLICK_AIR)) && shlkm.isHoldingShulker(e.getItem())) {
             if (!cfgi.cfg_rclickair) {
                 return;
             }
             e.setCancelled(true);
-            if (cfgi.cfg_requiresperms) {
-                if (!p.hasPermission("bettershulkerboxes.use")) {
-                    if (cfgi.cfg_nopermsmsg_enabled) {
-                        p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
-                    }
-                    return;
+            if (cfgi.cfg_requiresperms && !p.hasPermission("bettershulkerboxes.use")) {
+                if (cfgi.cfg_nopermsmsg_enabled) {
+                    p.sendMessage(cfgi.prefix + cfgi.nopermsmsg);
                 }
+                return;
             }
-            if ((cfgi.cfg_enablecooldown) &&
-                    (this.cooldownlist.contains(p.getName())) &&
-                    (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
+            if ((cfgi.cfg_enablecooldown) && (this.cooldownlist.contains(p.getName())) && (!p.hasPermission("bettershulkerboxes.bypasscooldown"))) {
                 if (cfgi.cfg_cooldoenmsg_enabled) {
                     p.sendMessage(cfgi.prefix + cfgi.cooldownmsg);
                 }

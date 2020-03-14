@@ -126,7 +126,7 @@ public class InteractEvent implements Listener {
             }
             ItemStack it = e.getCurrentItem();
             ArrayList<Integer> free_slots = new ArrayList<>();
-            for (int i = 0; i < 35; i++) {
+            for (int i = 0; i < 36; i++) {
                 if (p.getInventory().getItem(i) == null) {
                     free_slots.add(i);
                 }
@@ -137,12 +137,15 @@ public class InteractEvent implements Listener {
             }
             //e.getInventory().remove(it);
             int sel_slot = -1;
-            for (int i = 0; i < e.getInventory().getSize() - 1; i++) {
+            for (int i = 0; i < e.getInventory().getSize(); i++) {
                 ItemStack slot_stack = e.getInventory().getItem(i);
                 if (slot_stack != null && slot_stack.equals(it)) {
                     sel_slot = i;
                     break;
                 }
+            }
+            if (sel_slot == -1) {
+                return;
             }
             e.getInventory().setItem(sel_slot, new ItemStack(Material.AIR));
             p.getInventory().setItem(free_slots.get(0), it);

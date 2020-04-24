@@ -9,7 +9,7 @@
 # bettershulkerboxes.updatenotify: Allows players to receive notification about new versions. (Recommended for admins)
 # bettershulkerboxes.reload: Allows players to reload the config. (Recommended for admins)
 
-version: 2.13.0 # Do not touch
+version: 2.13.1 # Do not touch
 
 prefix: '&8[&3BSB&8] ' # Prefix of the messages in chat
 inventory_name: '&7Shulkerbox' # Name of the inventory (can use %itemname% to use item's name)
@@ -33,7 +33,7 @@ enable_rclick_chest_open: true #[Boolean] Enable right-click in chest to open sh
 
 # Since 2.7.0 Better Shulker Boxes automatically recollects server information. This is with the only purpose of helping development.
 # The data sent is completely anonymous, and it does not include compromising information.
-# The data recollected is limited to:
+# The data recollected is limited to: 
 # Server statistics: Player amount, online mode, Minecraft version, software (spigot, sponge, etc).
 # Hosting statistics: Number of cores of the CPU, system architecture, operating system, server location (by country) and java version.
 # Plugin (BSB only) statistics: Plugin version, some configuration parameters.

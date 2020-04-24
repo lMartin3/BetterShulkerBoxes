@@ -8,6 +8,7 @@ import org.bukkit.Material;
 import org.bukkit.block.ShulkerBox;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.ClickType;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 public class InteractEvent implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     private ConfigurationImport cfgi = plugin.cfgi;
-    private ShulkerManage shlkm = plugin.shlkm;
+    private final ShulkerManage shlkm = plugin.shlkm;
     ArrayList<String> cooldownlist = new ArrayList<>();
 
     public boolean doChecks(PlayerInteractEvent e) {
@@ -83,7 +84,7 @@ public class InteractEvent implements Listener {
 
 
     //Right click in inventory to open
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void rightClickInventory(InventoryClickEvent e) {
         if (e.isCancelled()) {
             return;

@@ -1,5 +1,6 @@
-package me.rektb.bettershulkerboxes;
+package me.rektb.bettershulkerboxes.utils;
 
+import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
 import org.bukkit.ChatColor;
 
 public class ConfigurationImport {

@@ -1,8 +1,8 @@
 package me.rektb.bettershulkerboxes.events;
 
 import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
-import me.rektb.bettershulkerboxes.ConfigurationImport;
-import me.rektb.bettershulkerboxes.ShulkerManage;
+import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
+import me.rektb.bettershulkerboxes.utils.ShulkerManage;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.ShulkerBox;

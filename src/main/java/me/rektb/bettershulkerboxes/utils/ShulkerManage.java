@@ -1,5 +1,6 @@
-package me.rektb.bettershulkerboxes;
+package me.rektb.bettershulkerboxes.utils;
 
+import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;

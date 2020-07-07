@@ -1,8 +1,8 @@
 package me.rektb.bettershulkerboxes.events;
 
 import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
-import me.rektb.bettershulkerboxes.ConfigurationImport;
-import me.rektb.bettershulkerboxes.ShulkerManage;
+import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
+import me.rektb.bettershulkerboxes.utils.ShulkerManage;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 public class DupePreventEvents implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     private ConfigurationImport cfgi = plugin.cfgi;
-    private ShulkerManage shlkm = plugin.shlkm;
+    private final ShulkerManage shlkm = plugin.shlkm;
 
     // This class prevents some dupes that could occur
 

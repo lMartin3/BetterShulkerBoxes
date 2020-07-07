@@ -1,4 +1,4 @@
-package me.rektb.bettershulkerboxes;
+package me.rektb.bettershulkerboxes.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -13,11 +13,11 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 public class UpdateChecker {
-    private int project;
+    private final int project;
     private URL checkURL;
     private URL changelogURL;
     private String newVersion;
-    private JavaPlugin plugin;
+    private final JavaPlugin plugin;
 
     UpdateChecker(JavaPlugin plugin, int projectID) {
         this.plugin = plugin;

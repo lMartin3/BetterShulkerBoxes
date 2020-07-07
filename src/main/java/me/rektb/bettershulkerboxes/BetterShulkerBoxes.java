@@ -2,6 +2,10 @@ package me.rektb.bettershulkerboxes;
 
 import me.rektb.bettershulkerboxes.commands.MainCommand;
 import me.rektb.bettershulkerboxes.events.*;
+import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
+import me.rektb.bettershulkerboxes.utils.Metrics;
+import me.rektb.bettershulkerboxes.utils.ShulkerManage;
+import me.rektb.bettershulkerboxes.utils.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -44,7 +48,7 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         if (matches.size() > 0) {
             version = matches.get(0);
         }
-        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[1]) < 13) { // Just a warn when used in versions under 1.13
+        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[1]) < 12) { // Just a warn when used in versions under 1.12
             getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
                     " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
                     " for players duping items and/or thermonuclear war.", version));

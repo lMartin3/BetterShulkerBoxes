@@ -4,6 +4,7 @@ version: 2.13.1
 description: Open your shulkerboxes easier!
 main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
 api-version: 1.13
+loadbefore: ["AutionHouse"]
 commands:
   bsb:
     description: Main command for Better Shulker Boxes

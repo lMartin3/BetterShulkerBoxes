@@ -1,7 +1,7 @@
 package me.rektb.bettershulkerboxes.commands;
 
 import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
-import me.rektb.bettershulkerboxes.ConfigurationImport;
+import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -6,6 +6,7 @@ import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
 import me.rektb.bettershulkerboxes.utils.Metrics;
 import me.rektb.bettershulkerboxes.utils.ShulkerManage;
 import me.rektb.bettershulkerboxes.utils.UpdateChecker;
+import me.rektb.bettershulkerboxes.utils.worldguard.WorldGuardSupport;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -18,6 +19,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class BetterShulkerBoxes extends JavaPlugin implements Listener {
+    public static BetterShulkerBoxes instance;
 
     //instance given to ConfigurationImport
     public BetterShulkerBoxes cfginst;
@@ -37,7 +39,10 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
     public ConfigurationImport cfgi;
     public ShulkerManage shlkm;
 
+    public WorldGuardSupport wgs = null;
+
     public void onEnable() {
+        instance = this;
         final String regex = "([0-9]{1,2}\\.[0-9]{1,2}(\\.[0-9]{1,2})?)"; //This should get the MC version from "git-Spigot-2ee05fe-d31f05f (MC: 1.15.1)"
         final Matcher m = Pattern.compile(regex).matcher(getServer().getVersion());
         final List<String> matches = new ArrayList<>();
@@ -51,8 +56,24 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[1]) < 12) { // Just a warn when used in versions under 1.12
             getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
                     " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
-                    " for players duping items and/or thermonuclear war.", version));
+                    " for players duping items, the server breaking entirely or anything else.", version));
             getServer().getConsoleSender().sendMessage(version.split("\\.")[1]);
+        }
+        boolean worldGuardEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldGuard");
+        boolean worldEditEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldEdit");
+        if (worldGuardEnabled) {
+            Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard detected, enabling WorldGuard support...");
+            if (!worldEditEnabled) {
+                Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, WoldEdit is missing.");
+            } else {
+                wgs = new WorldGuardSupport(() -> {
+                    Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard support enabled.");
+                }, () -> {
+                    Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "SEVERE ERROR - WORLD GUARD FLAG CONFLICT");
+                    wgs = null;
+                });
+                wgs.init();
+            }
         }
 
         loadConfig();
@@ -162,6 +183,10 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         this.interactEvent.getNewInstances();
         this.invCloseEvent.getNewInstances();
         this.shlkm.getNewInstances();
+    }
+
+    public static BetterShulkerBoxes getInstance() {
+        return instance;
     }
 
 }

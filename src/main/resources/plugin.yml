@@ -5,6 +5,7 @@ description: Open your shulkerboxes easier!
 main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
 api-version: 1.13
 loadbefore: ["AutionHouse"]
+softdepend: ["WorldGuard", "WorldEdit"]
 commands:
   bsb:
     description: Main command for Better Shulker Boxes

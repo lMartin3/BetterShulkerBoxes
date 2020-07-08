@@ -19,7 +19,7 @@ public class UpdateChecker {
     private String newVersion;
     private final JavaPlugin plugin;
 
-    UpdateChecker(JavaPlugin plugin, int projectID) {
+    public UpdateChecker(JavaPlugin plugin, int projectID) {
         this.plugin = plugin;
         this.newVersion = plugin.getDescription().getVersion();
         this.project = projectID;

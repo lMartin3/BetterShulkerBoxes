@@ -100,7 +100,7 @@ public class InteractEvent implements Listener {
 
         boolean is_inventory_shulker = false;
         boolean is_performing_switch = false;
-        if (p.getOpenInventory().getInventory(1) != null && p.getOpenInventory().getType().equals(InventoryType.SHULKER_BOX)) {
+        if (p.getOpenInventory().getTopInventory() != null && p.getOpenInventory().getType().equals(InventoryType.SHULKER_BOX)) {
             if (shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle())) {
                 is_inventory_shulker = true;
             }
@@ -162,7 +162,7 @@ public class InteractEvent implements Listener {
         removeCooldownLater(p);
 
 
-        if (p.getOpenInventory().getInventory(1) != null && is_performing_switch) {
+        if (p.getOpenInventory().getTopInventory() != null && is_performing_switch) {
             //Close inventory without performing unswap
             shlkm.swap.remove(p.getName());
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());

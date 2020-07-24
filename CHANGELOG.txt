@@ -1,1 +1,2 @@
-Fixed a bug where right-click inside an enderchest wouldn't work with the last slot
+Fixed 1.12.2 dupe bug.
+Added world guard support (for 1.13 and above).

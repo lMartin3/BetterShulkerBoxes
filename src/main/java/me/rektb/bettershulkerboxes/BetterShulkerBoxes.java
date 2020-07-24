@@ -63,6 +63,10 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                     " for players duping items, the server breaking entirely or anything else.", version));
             getServer().getConsoleSender().sendMessage(version.split("\\.")[1]);
         }
+
+
+        loadConfig();
+        checkConfigValidity();
         boolean worldGuardEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldGuard");
         boolean worldEditEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldEdit");
         if (worldGuardEnabled) {
@@ -81,10 +85,6 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                 wgs.init();
             }
         }
-
-        loadConfig();
-        checkConfigValidity();
-
         shlkm = new ShulkerManage();
         interactEvent = new InteractEvent();
         invClickEvent = new InvClickEvent(this);

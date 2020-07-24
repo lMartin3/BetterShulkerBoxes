@@ -1,2 +1,1 @@
-Fixed 1.12.2 dupe bug.
-Added world guard support (for 1.13 and above).
+Fixed a bug that caused a NPE when enabling the plugin if there was no configuration file present.

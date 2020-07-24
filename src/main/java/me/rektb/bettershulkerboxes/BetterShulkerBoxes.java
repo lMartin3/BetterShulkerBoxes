@@ -53,7 +53,11 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         if (matches.size() > 0) {
             version = matches.get(0);
         }
-        if (!version.equals("invalid") && Integer.parseInt(version.split("\\.")[1]) < 12) { // Just a warn when used in versions under 1.12
+        int v = 0;
+        if (!version.equals("invalid")) {
+            v = Integer.parseInt(version.split("\\.")[1]);
+        }
+        if (v < 12) { // Just a warn when used in versions under 1.12
             getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
                     " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
                     " for players duping items, the server breaking entirely or anything else.", version));
@@ -65,6 +69,8 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
             Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard detected, enabling WorldGuard support...");
             if (!worldEditEnabled) {
                 Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, WoldEdit is missing.");
+            } else if (v < 13) {
+                Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, spigot 1.13 or later is required.");
             } else {
                 wgs = new WorldGuardSupport(() -> {
                     Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard support enabled.");

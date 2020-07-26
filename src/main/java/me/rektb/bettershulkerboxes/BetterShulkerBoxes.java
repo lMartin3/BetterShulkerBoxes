@@ -41,39 +41,15 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
     public WorldGuardSupport wgs = null;
 
-    public void onEnable() {
-        instance = this;
-        final String regex = "([0-9]{1,2}\\.[0-9]{1,2}(\\.[0-9]{1,2})?)"; //This should get the MC version from "git-Spigot-2ee05fe-d31f05f (MC: 1.15.1)"
-        final Matcher m = Pattern.compile(regex).matcher(getServer().getVersion());
-        final List<String> matches = new ArrayList<>();
-        while (m.find()) {
-            matches.add(m.group(0));
-        }
-        String version = "invalid";
-        if (matches.size() > 0) {
-            version = matches.get(0);
-        }
-        int v = 0;
-        if (!version.equals("invalid")) {
-            v = Integer.parseInt(version.split("\\.")[1]);
-        }
-        if (v < 12) { // Just a warn when used in versions under 1.12
-            getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
-                    " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
-                    " for players duping items, the server breaking entirely or anything else.", version));
-            getServer().getConsoleSender().sendMessage(version.split("\\.")[1]);
-        }
-
-
-        loadConfig();
-        checkConfigValidity();
+    @Override
+    public void onLoad() {
         boolean worldGuardEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldGuard");
         boolean worldEditEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldEdit");
         if (worldGuardEnabled) {
             Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard detected, enabling WorldGuard support...");
             if (!worldEditEnabled) {
                 Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, WoldEdit is missing.");
-            } else if (v < 13) {
+            } else if (getVersion() < 13) {
                 Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, spigot 1.13 or later is required.");
             } else {
                 wgs = new WorldGuardSupport(() -> {
@@ -85,6 +61,14 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                 wgs.init();
             }
         }
+    }
+
+    public void onEnable() {
+        instance = this;
+
+
+        loadConfig();
+        checkConfigValidity();
         shlkm = new ShulkerManage();
         interactEvent = new InteractEvent();
         invClickEvent = new InvClickEvent(this);
@@ -134,7 +118,6 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
                     "help plugin development.");
         }
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "Better Shulkerboxes enabled - Plugin written by Rektb");
-
         Bukkit.getScheduler().runTaskAsynchronously(this, new Runnable() {
             public void run() {
                 BetterShulkerBoxes.this.getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "BSB is checking for updates...");
@@ -193,6 +176,30 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
 
     public static BetterShulkerBoxes getInstance() {
         return instance;
+    }
+
+    public int getVersion() {
+        final String regex = "([0-9]{1,2}\\.[0-9]{1,2}(\\.[0-9]{1,2})?)"; //This should get the MC version from "git-Spigot-2ee05fe-d31f05f (MC: 1.15.1)"
+        final Matcher m = Pattern.compile(regex).matcher(getServer().getVersion());
+        final List<String> matches = new ArrayList<>();
+        while (m.find()) {
+            matches.add(m.group(0));
+        }
+        String version = "invalid";
+        if (matches.size() > 0) {
+            version = matches.get(0);
+        }
+        int v = 0;
+        if (!version.equals("invalid")) {
+            v = Integer.parseInt(version.split("\\.")[1]);
+        }
+        if (v < 12) { // Just a warn when used in versions under 1.12
+            getServer().getConsoleSender().sendMessage(ChatColor.RED + String.format("Warning! BetterShulkerBoxes does" +
+                    " NOT support %s officially, if you find any problems contact the developer. I am not responsible" +
+                    " for players duping items, the server breaking entirely or anything else.", version));
+            getServer().getConsoleSender().sendMessage(version.split("\\.")[1]);
+        }
+        return v;
     }
 
 }

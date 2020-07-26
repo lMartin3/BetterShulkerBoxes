@@ -1,1 +1,2 @@
-Fixed a bug that caused a NPE when enabling the plugin if there was no configuration file present.
+Changes in version 2.14.1:
+Fixed an error that would occur when the plugin loaded if world guard was present.

@@ -11,6 +11,7 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
+import org.bukkit.event.player.PlayerPortalEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class DupePreventEvents implements Listener {
@@ -95,5 +96,15 @@ public class DupePreventEvents implements Listener {
     public void getNewInstances() {
         this.plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
         this.cfgi = plugin.cfgi;
+    }
+
+    //This only occurs in OLD versions of paper, as the player inventory isn't closed when going through a portal.
+    //This was added only so those who like waiting 20s before the server starts don't experience the bug.
+    @EventHandler
+    public void onDimensionChange(PlayerPortalEvent e) {
+        Player p = e.getPlayer();
+        if (shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle()) && (p.getInventory().getItemInMainHand().toString().contains("SHULKER_BOX"))) {
+            shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), p.getOpenInventory().getTopInventory());
+        }
     }
 }

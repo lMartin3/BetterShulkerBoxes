@@ -46,16 +46,16 @@ public class BetterShulkerBoxes extends JavaPlugin implements Listener {
         boolean worldGuardEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldGuard");
         boolean worldEditEnabled = Bukkit.getPluginManager().isPluginEnabled("WorldEdit");
         if (worldGuardEnabled) {
-            Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard detected, enabling WorldGuard support...");
+            Bukkit.getConsoleSender().sendMessage("[BSB] World Guard detected, enabling WorldGuard support...");
             if (!worldEditEnabled) {
-                Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, WoldEdit is missing.");
+                Bukkit.getConsoleSender().sendMessage("[BSB] Could not start WorldGuard support, WoldEdit is missing.");
             } else if (getVersion() < 13) {
-                Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "Could not start WorldGuard support, spigot 1.13 or later is required.");
+                Bukkit.getConsoleSender().sendMessage("[BSB] Could not start WorldGuard support, spigot 1.13 or later is required.");
             } else {
                 wgs = new WorldGuardSupport(() -> {
-                    Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "World Guard support enabled.");
+                    Bukkit.getConsoleSender().sendMessage("[BSB] World Guard support enabled.");
                 }, () -> {
-                    Bukkit.getConsoleSender().sendMessage(cfgi.cfg_prefix + "SEVERE ERROR - WORLD GUARD FLAG CONFLICT");
+                    Bukkit.getConsoleSender().sendMessage("[BSB] SEVERE ERROR - WORLD GUARD FLAG CONFLICT");
                     wgs = null;
                 });
                 wgs.init();

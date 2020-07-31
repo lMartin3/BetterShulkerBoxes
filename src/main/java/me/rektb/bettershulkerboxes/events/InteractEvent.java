@@ -78,6 +78,10 @@ public class InteractEvent implements Listener {
             removeCooldownLater(p);
             //String getitemname = holding.getItemMeta().getDisplayName();
             int slot = p.getInventory().getHeldItemSlot();
+            if (p.getOpenInventory().getTopInventory().getType().equals(InventoryType.SHULKER_BOX)) {
+                p.closeInventory();
+                return;
+            }
             plugin.shlkm.openShulker(p, holding, slot);
         }
     }

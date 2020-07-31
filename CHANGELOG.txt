@@ -1,2 +1,2 @@
 Changes in version 2.14.3:
-Fixed a duplication bug that only occurs in old 1.15 builds of paper.
+Fixed a duplication bug that was done with a mod.

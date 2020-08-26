@@ -122,10 +122,11 @@ public class ShulkerManage {
     }
 
     public boolean isInventoryShulker(ItemStack shulker, String inventoryname) {
-        if (shulker == null || shulker.getItemMeta() == null) return false;
         String checkname = cfgi.invname;
         String holdingitemname = "";
-        if (!shulker.getItemMeta().getDisplayName().isEmpty()) {
+        if (shulker.getItemMeta() != null &&
+                shulker.getItemMeta().getDisplayName() != null &&
+                !shulker.getItemMeta().getDisplayName().isEmpty()) {
             holdingitemname = shulker.getItemMeta().getDisplayName();
         }
         checkname = checkname.replace("%itemname%", holdingitemname);

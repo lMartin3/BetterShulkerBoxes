@@ -32,4 +32,3 @@ permissions:
     description: Allows the player to be notified of a new BSB version when you join, admin-only recommended.
   bettershulkerboxes.reload:
     description: Allows the player to reload the configuration file using /bsb reload
-K

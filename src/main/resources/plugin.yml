@@ -3,7 +3,6 @@ author: Rektb
 version: 2.14.4
 description: Open your shulkerboxes easier!
 main: me.rektb.bettershulkerboxes.BetterShulkerBoxes
-api-version: 1.13
 loadbefore: ["AutionHouse"]
 softdepend: ["WorldGuard", "WorldEdit"]
 commands:

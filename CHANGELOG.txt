@@ -1,2 +1,1 @@
-Changes in version 2.14.3:
-Fixed a duplication bug that was done with a mod.
+Fixed a bug that occurred when using a color + placeholder as name

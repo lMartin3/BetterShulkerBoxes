@@ -66,7 +66,7 @@ public class ShulkerManage {
         ShulkerBox shulker = (ShulkerBox) im.getBlockState();
         String invname = "";
 
-        if (shulkerStack.hasItemMeta() && shulkerStack.getItemMeta().hasDisplayName()) {
+        if (shulkerStack.hasItemMeta() && shulkerStack.getItemMeta().hasDisplayName() && !shulkerStack.getItemMeta().getDisplayName().isEmpty()) {
             invname = shulkerStack.getItemMeta().getDisplayName();
         }
         String in = im.getDisplayName();
@@ -80,7 +80,8 @@ public class ShulkerManage {
         invname = cfgi.invname.replace("%itemname%", invname);
 
         Inventory inv;
-        if (invname.equals("") || invname.equals(" ")) {
+        String strippedInvname = ChatColor.stripColor(invname);
+        if (strippedInvname.isEmpty() || strippedInvname.replace(" ", "").isEmpty()) {
             inv = Bukkit.createInventory(p, InventoryType.SHULKER_BOX, InventoryType.SHULKER_BOX.getDefaultTitle());
         } else {
             inv = Bukkit.createInventory(p, InventoryType.SHULKER_BOX, invname);
@@ -130,7 +131,7 @@ public class ShulkerManage {
             holdingitemname = shulker.getItemMeta().getDisplayName();
         }
         checkname = checkname.replace("%itemname%", holdingitemname);
-        if (checkname.isEmpty()) {
+        if (ChatColor.stripColor(checkname).isEmpty()) {
             checkname = InventoryType.SHULKER_BOX.getDefaultTitle();
         }
         return inventoryname.equals(checkname);

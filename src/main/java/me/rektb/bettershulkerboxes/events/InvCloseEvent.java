@@ -3,6 +3,7 @@ package me.rektb.bettershulkerboxes.events;
 import me.rektb.bettershulkerboxes.BetterShulkerBoxes;
 import me.rektb.bettershulkerboxes.utils.ConfigurationImport;
 import me.rektb.bettershulkerboxes.utils.ShulkerManage;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -35,9 +36,10 @@ public class InvCloseEvent implements Listener {
             }
 
             String checkname = cfgi.invname;
+
             if (holdingitemname.isEmpty()) {
                 checkname = cfgi.invname.replace("%itemname%", holdingitemname);
-                if (checkname.isEmpty()) {
+                if (ChatColor.stripColor(checkname).isEmpty()) {
                     checkname = InventoryType.SHULKER_BOX.getDefaultTitle();
                 }
             } else {

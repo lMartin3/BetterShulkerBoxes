@@ -172,6 +172,9 @@ public class InteractEvent implements Listener {
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), e.getInventory());
 
         }
+        if (!shlkm.isHoldingShulker(e.getCurrentItem())) {
+            return;
+        }
         shlkm.shulkerSwap(p, e_slot);
         shlkm.openShulker(p, p.getInventory().getItemInMainHand(), p.getInventory().getHeldItemSlot());
     }

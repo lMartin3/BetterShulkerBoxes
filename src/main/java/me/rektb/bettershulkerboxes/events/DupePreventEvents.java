@@ -14,6 +14,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerPortalEvent;
 import org.bukkit.inventory.ItemStack;
 
+
 public class DupePreventEvents implements Listener {
     private BetterShulkerBoxes plugin = BetterShulkerBoxes.getPlugin(BetterShulkerBoxes.class);
     private ConfigurationImport cfgi = plugin.cfgi;
@@ -68,6 +69,19 @@ public class DupePreventEvents implements Listener {
         }
         if (shlkm.isInventoryShulker(p.getInventory().getItemInMainHand(), p.getOpenInventory().getTitle()) && (p.getInventory().getItemInMainHand().toString().contains("SHULKER_BOX"))) {
             shlkm.closeShulker(p, p.getInventory().getItemInMainHand(), p.getOpenInventory().getTopInventory());
+        }
+    }
+
+    // Player opens shulkerbox -> before gui opens changes it to off hand -> the shulker inventory is untracked -> dupe
+    @EventHandler
+    public void offHandDupe(InventoryClickEvent e) {
+        Player p = (Player) e.getWhoClicked();
+        boolean isinvshulker = shlkm.isInventoryShulker(p.getInventory().getItemInOffHand(), e.getView().getTitle());
+        
+        if (isinvshulker && shlkm.isHoldingShulker(p.getInventory().getItemInOffHand())) {
+            p.sendMessage(cfgi.prefix + cfgi.offhandmsg);
+            e.setCancelled(true);
+            return;
         }
     }
 
